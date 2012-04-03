@@ -18,6 +18,20 @@ For now, the ones that are supported are:
 * Feedburner (RSS icon)
 * Olark (website chat widget)
 
+Add the social profile identities right under `author: name` and `author: email` like so:
+
+    author :
+      name : YOUR_NAME
+      email : YOUR_EMAIL_ADDRESS
+      aboutme : USERNAME
+      github : USERNAME
+      twitter : USERNAME
+      linkedin : USERNAME
+      facebook : USERNAME
+      feedburner : USERNAME
+      flickr : USERNAME
+      olark : OLARK_CODE
+
 You can also add `navlinks` and `footerlinks` to customize the navigation links and footer links. For example:
 
     navlinks :
