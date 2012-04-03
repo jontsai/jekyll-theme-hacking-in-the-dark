@@ -1,0 +1,22 @@
+<footer>
+  <div id="footer">
+    <div class="footer-item">
+      <ul class="footerlinks">
+	<li>Meta:</li>
+	{% if site.footerlinks %}
+	{% assign pages_list = site.footerlinks %}
+	{% else %}
+	{% assign pages_list = site.pages %}
+	{% assign group = 'navigation' %}
+	{% endif %}
+	{% include JB/pages_list %}
+	{% include themes/hacking-in-the-dark/social.html %}
+      </ul>
+    </div>
+    <div class="footer-item">
+      &copy; {{ site.author.name }} 2012. Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+    </div>
+  </div>
+</footer>
+{% include JB/analytics %}
+{% include themes/hacking-in-the-dark/olark.html %}
