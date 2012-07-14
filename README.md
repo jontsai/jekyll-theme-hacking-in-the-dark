@@ -18,7 +18,7 @@ Here's what's supported now, with more on the way:
 
 * Customized Navigation Links - choose which pages show up in your navigation menu
 * Customized Footer Links
-* Automatically add social media icons in the footer linking to your various profiles 
+* Social Media Sites - Pull in a lot of content from social media sites just by adding your profile
 * Custom credits - easily thank other developers or useful websites by linking to them
 
 ## Custom Navigation and Footer Links
@@ -52,7 +52,7 @@ You can add `navlinks` and `footerlinks` to customize the navigation links and f
 
 You can also customize credits (shoutouts, thank-yous) by adding a `credits` node.
 
-I gave a shoutout to Jekyll and Jekyll-Bootstrap, and my hosting and DNS providers:
+I gave a shoutout to [Jekyll](https://github.com/mojombo/jekyll) and [Jekyll-Bootstrap](http://jekyllbootstrap.com), and my hosting and DNS providers, [Linode](http://www.linode.com/?r=65762fd9ef89c62a08eddbb4c641c9b9a5415ba9) and [FreeDNS](http://freedns.afraid.org/)
 
     credits :
       -
@@ -76,7 +76,7 @@ I gave a shoutout to Jekyll and Jekyll-Bootstrap, and my hosting and DNS provide
         link_text : FreeDNS
         post_text : '.'
 
-## Social Media Links
+## Social Media Profiles and Links
 
 For now, the ones that are supported are:
 
