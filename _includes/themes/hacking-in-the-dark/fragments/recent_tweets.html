@@ -1,0 +1,58 @@
+<div id="twitterFeed0">
+    <a href="http://twitter.com/{{ site.author.twitter }}">Recent Tweets from @{{ site.author.twitter }}</a>:
+</div>
+<script type="text/javascript">
+// load required modules and set up YUI instance
+YUI().use( 'node', 'substitute', 'yql', function ( Y ) {
+    var n = Y.one( '#twitterFeed0' );
+
+    // accepts a YQL JSON result object and produces a list of 
+    // tweets using Y.substitute for templating
+    formatTwitterFeed = function ( r ) {
+        if (r) {
+            var s = r.query.results.statuses.status,
+            // HTML markup template
+            t = '<li><span class="status-text">{sText}</span> <span ' + 
+            'class="quiet status-time">{sTime}</span></li>',
+            l = s.length,
+            f = '<ul>',
+            i;
+                
+            for ( i = 0; i < l; i++ ) {
+                // Y.substitute method to merge HTML markup and result object
+                var origStamp = Date.parse( s[i].created_at ),
+                curDate = new Date(),
+                currentStamp = curDate.getTime(),
+                difference = parseInt( ( currentStamp - origStamp ) / 1000, 10 );
+                if ( difference < 30 * 24 * 3600 ) {
+                    f += Y.substitute( t, {
+
+                        // convert usernames, hash tags and URLs to links
+                        sText : s[i].text
+                        .replace(/(http\S+)/i,'<a href="$1" target="_blank">$1</a>')
+                        .replace(/(@)([a-z0-9_\-]+)/i,
+                                 '<a href="http://twitter.com/$2" target="_blank">$1$2</a>')
+                        .replace(/(#)(\S+)/ig, 
+                                 '<a href="http://search.twitter.com/search' + 
+                                 '?q=%23$2" target="_blank">$1$2</a>'),
+
+                        sTime : relativeTime( s[i].created_at )
+
+                    } );
+                }
+            }
+
+            f += '</ul>';
+
+            // append output to target parent node
+            n.append( f );
+        }
+    };
+
+    // YQL Twitter query limited to 5 results for a specified username
+    var q = Y.YQL( 'select * from twitter.user.timeline( 5 ) ' + 
+                   'where screen_name="@{{ site.author.twitter }}"', formatTwitterFeed );
+});
+</script>
+</div>
+</div>

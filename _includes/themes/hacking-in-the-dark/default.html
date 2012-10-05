@@ -10,7 +10,7 @@
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <script src="http://yui.yahooapis.com/3.4.1/build/yui/yui-min.js"></script>
+    <script src="http://yui.yahooapis.com/3.7.2/build/yui/yui-min.js"></script>
     <script src="{{ ASSET_PATH }}/js/site.js"></script>
 
     <!-- Le styles -->
@@ -35,9 +35,11 @@
     <div id="wrap">
       {% include themes/hacking-in-the-dark/header.html %}
       <div id="main">
+	{% include themes/hacking-in-the-dark/left_box.html %}
 	<div class="centered-box">
           {{ content }}
 	</div>
+	{% include themes/hacking-in-the-dark/right_box.html %}
       </div>
     </div>
     {% include themes/hacking-in-the-dark/footer.html %}

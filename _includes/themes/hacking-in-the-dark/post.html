@@ -2,7 +2,7 @@
 
 <div class="page-content">
   {{ content }}
-  <hr />
+  <hr class="pagination-separator-top" />
   <div class="pagination">
     {% if page.previous %}
     <div class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Previous</a></div>
@@ -17,7 +17,7 @@
     {% endif %}
     <br />
   </div>
-  <hr />
+  <hr class="pagination-separator-bottom" />
   {% include JB/comments %}
 </div>
 

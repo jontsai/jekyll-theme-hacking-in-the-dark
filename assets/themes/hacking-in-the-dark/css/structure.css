@@ -16,7 +16,24 @@ body {
     padding: 15px;
 }
 
+#left_box {
+    position: absolute;
+    left: 20px;
+    width: 200px;
+}
+
 #main {
+}
+
+#right_box {
+    /* position: absolute;*/
+    position: fixed;
+    right: 20px;
+    top: 200px;
+    /* margin-top: 250px; */
+    width: 200px;
+    padding: 20px;
+    border: 2px solid;
 }
 
 #footer {
@@ -26,7 +43,7 @@ body {
 
 #about_iframe {
     width: 800px;
-    height: 600px;
+    height: 625px;
     overflow: hidden;
     border: none;
 }
@@ -37,8 +54,26 @@ body {
 
 /* page structural css */
 .centered-box {
-    width: 960px;
+    width: 100%;
+    max-width: 960px;
     margin: auto;
+}
+
+@media only screen and (max-width: 1320px) {
+    #right_box {
+	display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .centered-box {
+	width: 100%;
+	max-width: 710px;
+	margin: auto;
+    }
+    #right_box {
+	display: none;
+    }
 }
 
 .page-header,
@@ -46,7 +81,10 @@ body {
     border: 3px solid;
     margin-top: 10px;
     margin-bottom: 10px;
-    padding-left: 12px
+    padding-left: 20px;
+    -webkit-border-radius: 20px 0;
+    -moz-border-radius: 20px 0;
+    border-radius: 20px 0;
 }
 
 .page-content h2 {
@@ -54,9 +92,16 @@ body {
     margin-top: 10px;
     margin-bottom: 10px;
     padding-left: 12px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
 }
 
 /* dependent structural css */
+
+#header .gravatar {
+    vertical-align: middle;
+}
 
 #header .tagline {
     padding: 15px;
@@ -124,6 +169,14 @@ li {
     margin-left: 1em;
 }
 
+.pagination-separator-top {
+    margin-top: 20px;
+}
+
+.pagination-separator-bottom {
+    margin-bottom: 10px;
+}
+
 .pagination {
     width: 100%;
     text-align: center;
@@ -135,4 +188,10 @@ li {
 
 .pagination .next {
     float: right;
+}
+
+.rounded-10 {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
 }

@@ -10,14 +10,14 @@
 	{% assign group = 'navigation' %}
 	{% endif %}
 	{% include JB/pages_list %}
-	{% include themes/hacking-in-the-dark/social.html %}
+	{% include themes/hacking-in-the-dark/fragments/social.html %}
       </ul>
     </div>
     <div class="footer-item">
       &copy; {{ site.author.name }} 2012.
-      {% include themes/hacking-in-the-dark/credits.html %}
+      {% include themes/hacking-in-the-dark/fragments/credits.html %}
     </div>
   </div>
 </footer>
 {% include JB/analytics %}
-{% include themes/hacking-in-the-dark/olark.html %}
+{% include themes/hacking-in-the-dark/fragments/olark.html %}
