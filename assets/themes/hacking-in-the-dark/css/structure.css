@@ -114,26 +114,26 @@ body {
 
 h1 {
     font-size: 36px;
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding: 12px 0px;
+    marigin: 18px 0px;
 }
 
 h2 {
     font-size: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 12px 0px;
+    marigin: 18px 0px;
 }
 
 h3 {
     font-size: 27px;
-    padding-top: 9px;
-    padding-bottom: 9px;
+    padding: 12px 0px;
+    marigin: 18px 0px;
 }
 
-h4{
+h4 {
     font-size: 24px;
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding: 12px 0px;
+    marigin: 18px 0px;
 }
 
 #navbar ul {
