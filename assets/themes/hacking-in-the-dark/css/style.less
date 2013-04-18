@@ -1,0 +1,116 @@
+@import "_imports/colors.less";
+
+@general-font: "Palatino Linotype", Palatino, serif;
+@branding-font: Courier New, serif;
+@header-font: "Lucida Sans Unicode", "Lucida Grand", sans-serif;
+
+.hackinthedark-base {
+    background-color: @dark-charcoal;
+    color: @white;
+    font-size: 18px;
+    font-family: @general-font;
+}
+
+.hackinthedark {
+    .hackinthedark-base;
+    #wrap, #footer {
+        .hackinthedark-base;
+    }
+
+    a {
+        color: @dark-forest-green;
+        &:active,
+        &:hover {
+            color: @golf-green;
+        }
+    }
+
+    .brand,
+    a.brand,
+    a.brand:active,
+    a.brand:hover {
+        color: @white;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 72px;
+        letter-spacing: 10px;
+        font-family: @branding-font;
+    }
+
+    .tagline {
+        font-style: italic;
+        font-family: @general-font;
+    }
+    .content-title .tagline {
+        font-style: normal;
+        font-family: @branding-font;
+    }
+
+/*
+    li.active a,
+    li.active a:hover {
+        color: @white;
+        text-decoration: none;
+        cursor: default;
+    }
+*/
+
+    .footerlinks img {
+        vertical-align: middle;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        font-weight: bold;
+        font-family: @header-font;
+    }
+    .page-header,
+    .page-content h1 {
+        background-color: @deep-orange;
+    }
+
+    .page-header,
+    .page-content h1,
+    .page-content h2 {
+        border-color: @caution-orange;
+    }
+
+    strong {
+        font-weight: bold;
+    }
+
+    li {
+        list-style-type: disc;
+    }
+
+    .pagination li {
+        display: inline;
+        list-style-type: none;
+    }
+
+    /* fonts */
+
+    .navlinks,
+    .footerlinks,
+    .pagination,
+    #disqus_thread a,
+    #dsq-sort-by {
+        font-family: @header-font;
+    }
+
+    #dsq-comments,
+    #dsq-comments a {
+        font-family: @general-font;
+    }
+
+    .yui3-twitter {
+        .yui3-twitter-bdy {
+        }
+        li {
+            list-style-type: none;
+            color: @black;
+        }
+    }
+}
