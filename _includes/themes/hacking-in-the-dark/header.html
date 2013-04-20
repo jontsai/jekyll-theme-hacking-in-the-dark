@@ -3,7 +3,12 @@
   <a href="http://github.com/{{ site.author.github }}"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub" /></a>
   {% endif %}
 
-  <a class="brand" href="{{ HOME_PATH }}">{% if site.author.gravatar %}<img class="gravatar" src="http://www.gravatar.com/avatar/{{ site.author.gravatar }}?s=128" />{% endif %} {{ site.title }}</a><br/>
+  <a class="brand" href="{{ HOME_PATH }}">
+    {% if site.author.gravatar %}<img class="gravatar" src="http://www.gravatar.com/avatar/{{ site.author.gravatar }}?s=128"
+ />{% endif %}
+    {% if site.header_title %}{{ site.header_title }}{% else %}{{ site.title }}{% endif %}
+  </a><br/>
+
   {% if site.tagline %}
   <div class="tagline">
     "{{ site.tagline }}"
