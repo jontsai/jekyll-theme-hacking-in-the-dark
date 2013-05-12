@@ -14,9 +14,9 @@
     <script src="{{ ASSET_PATH }}/js/site.js"></script>
 
     <!-- Le styles -->
-    <link href="{{ ASSET_PATH }}/css/yui/cssbase-min.css" rel="stylesheet">
-    <link href="{{ ASSET_PATH }}/css/yui/cssfonts-min.css" rel="stylesheet">
-    <link href="{{ ASSET_PATH }}/css/yui/cssreset-min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.10.0/build/cssnormalize/cssnormalize-min.css">
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.10.0/build/cssfonts/cssfonts-min.css">
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.10.0/build/cssgrids-responsive/cssgrids-responsive-min.css">
     <link href="{{ ASSET_PATH }}/css/sticky-footer.css" rel="stylesheet" type="text/css" media="all">
     <link href="{{ ASSET_PATH }}/css/structure.css" rel="stylesheet" type="text/css" media="all">
     <link href="{{ ASSET_PATH }}/css/style.css" rel="stylesheet" type="text/css" media="all">
@@ -28,6 +28,7 @@
     <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
   -->
+    {% include JB/analytics %}
   </head>
 
   <body id="body" class="hackinthedark">
@@ -43,5 +44,6 @@
       </div>
     </div>
     {% include themes/hacking-in-the-dark/footer.html %}
+    {% include themes/hacking-in-the-dark/fragments/olark.html %}
   </body>
 </html>

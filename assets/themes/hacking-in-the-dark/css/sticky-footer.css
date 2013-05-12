@@ -20,16 +20,16 @@ body {
 }
 #main {
   overflow: auto;
-  padding-bottom: 75px;
+  padding-bottom: 125px;
   /* must be same height as the footer */
 
 }
 #footer {
   position: relative;
-  margin-top: -75px;
+  margin-top: -125px;
   /* negative value of footer height */
 
-  height: 75px;
+  height: 125px;
   clear: both;
 }
 /*Opera Fix*/

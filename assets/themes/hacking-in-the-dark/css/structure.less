@@ -38,7 +38,10 @@ body {
 
 #footer {
     text-align: center;
-    height: 75px;
+    height: 125px;
+    .footer-spacer {
+        height: 50px;
+    }
 }
 
 #about_iframe {
@@ -112,28 +115,25 @@ body {
     display: inline;
 }
 
+.h-base(@size) {
+    font-size: @size;
+    margin: (@size / 2) 0px;
+}
+
 h1 {
-    font-size: 36px;
-    padding: 12px 0px;
-    marigin: 18px 0px;
+    .h-base(36px);
 }
 
 h2 {
-    font-size: 30px;
-    padding: 12px 0px;
-    marigin: 18px 0px;
+    .h-base(30px);
 }
 
 h3 {
-    font-size: 27px;
-    padding: 12px 0px;
-    marigin: 18px 0px;
+    .h-base(27px);
 }
 
 h4 {
-    font-size: 24px;
-    padding: 12px 0px;
-    marigin: 18px 0px;
+    .h-base(24px);
 }
 
 #navbar ul {
@@ -142,7 +142,7 @@ h4 {
     padding-bottom: 6px;
 }
 
-.page-header .tagline {
+.page-header .page-tagline {
     font-size: 26px;
 }
 

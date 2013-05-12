@@ -32,7 +32,10 @@ body {
 }
 #footer {
   text-align: center;
-  height: 75px;
+  height: 125px;
+}
+#footer .footer-spacer {
+  height: 50px;
 }
 #about_iframe {
   width: 800px;
@@ -96,30 +99,26 @@ body {
 }
 h1 {
   font-size: 36px;
-  padding: 12px 0px;
-  marigin: 18px 0px;
+  margin: 18px 0px;
 }
 h2 {
   font-size: 30px;
-  padding: 12px 0px;
-  marigin: 18px 0px;
+  margin: 15px 0px;
 }
 h3 {
   font-size: 27px;
-  padding: 12px 0px;
-  marigin: 18px 0px;
+  margin: 13.5px 0px;
 }
 h4 {
   font-size: 24px;
-  padding: 12px 0px;
-  marigin: 18px 0px;
+  margin: 12px 0px;
 }
 #navbar ul {
   font-size: 18px;
   padding-top: 6px;
   padding-bottom: 6px;
 }
-.page-header .tagline {
+.page-header .page-tagline {
   font-size: 26px;
 }
 .navlinks li {

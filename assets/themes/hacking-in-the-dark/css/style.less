@@ -37,11 +37,14 @@
         font-family: @branding-font;
     }
 
-    .tagline {
-        font-style: italic;
-        font-family: @general-font;
+    #header {
+        .tagline {
+            font-style: italic;
+            font-family: @general-font;
+        }
     }
-    .content-title .tagline {
+    .page-header .page-tagline {
+        font-weight: bold;
         font-style: normal;
         font-family: @branding-font;
     }
@@ -75,14 +78,6 @@
     .page-content h1,
     .page-content h2 {
         border-color: @caution-orange;
-    }
-
-    strong {
-        font-weight: bold;
-    }
-
-    li {
-        list-style-type: disc;
     }
 
     .pagination li {

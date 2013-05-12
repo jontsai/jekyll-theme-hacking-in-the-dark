@@ -1,3 +1,10 @@
 <div class="page-header">
-  <h1 id="content_title" class="content-title">{{ page.title }} {% if page.tagline %}<span class="tagline">$ {{ page.tagline }}</span>{% endif %}</h1>
+  <h1>
+    {{ page.title }}
+    {% if page.tagline %}
+    <br/>
+    <span class="page-tagline">
+      $ {{ page.tagline }}</span>
+    {% endif %}
+  </h1>
 </div>
