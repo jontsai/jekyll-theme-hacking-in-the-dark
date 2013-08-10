@@ -1,5 +1,12 @@
 <div id="right_box" class="rounded-10">
-{% if site.author.twitter %}
-{% include themes/hacking-in-the-dark/fragments/recent_tweets.html %}
-{% endif %}
+  <div class="social-buttons">
+    {% include themes/hacking-in-the-dark/fragments/social/facebook_like.html %}
+    {% include themes/hacking-in-the-dark/fragments/social/tweet.html %}
+    {% include themes/hacking-in-the-dark/fragments/social/google_plusone.html %}
+    {% include themes/hacking-in-the-dark/fragments/social/flattr.html %}
+  </div>
+
+  {% if nil and site.author.twitter %}
+  {% include themes/hacking-in-the-dark/fragments/recent_tweets.html %}
+  {% endif %}
 </div>

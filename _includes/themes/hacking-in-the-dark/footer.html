@@ -1,8 +1,8 @@
 <footer>
   <div id="footer">
-    <div class="footer-spacer"></div>
-    <div class="footer-item">
-      <ul class="footerlinks">
+    <div class="spacer"></div>
+    <div class="item">
+      <ul class="links">
 	<li>Meta:</li>
 	{% if site.footerlinks %}
 	{% assign pages_list = site.footerlinks %}
@@ -14,10 +14,9 @@
 	{% include themes/hacking-in-the-dark/fragments/social.html %}
       </ul>
     </div>
-    <div class="footer-item">
+    <div class="item">
       &copy; {{ site.author.name }} {{ site.copyright_year }}.
       {% include themes/hacking-in-the-dark/fragments/credits.html %}
     </div>
   </div>
 </footer>
-

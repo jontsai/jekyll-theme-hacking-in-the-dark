@@ -1,49 +1,115 @@
-/* main structural css */
+@import "_imports/mixins.less";
+
 body {
     height: 100%;
     width: 100%;
 }
 
-#container {
-    padding: 20px;
-    width: 900px;
-    margin: auto;
-}
-
 #header {
     font-size: 18px;
     text-align: center;
-    padding: 15px;
-}
-
-#left_box {
-    position: absolute;
-    left: 20px;
-    width: 200px;
-}
-
-#main {
-}
-
-#right_box {
-    /* position: absolute;*/
-    position: fixed;
-    right: 20px;
-    top: 200px;
-    /* margin-top: 250px; */
-    width: 200px;
-    padding: 20px;
-    border: 2px solid;
-}
-
-#footer {
-    text-align: center;
-    height: 125px;
-    .footer-spacer {
-        height: 50px;
+    padding-top: 15px;
+    .brand {
+    }
+    .gravatar {
+        vertical-align: middle;
+    }
+    .tagline {
+        padding: 15px;
+    }
+    #navbar {
+        ul.navlinks {
+            font-size: 18px;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            li {
+                display: inline;
+                margin-left: 0px;
+                padding: 15px;
+            }
+        }
     }
 }
 
+#main {
+    #left_box {
+    }
+
+    #right_box {
+        margin: 20px;
+        padding: 20px;
+        border: 2px solid;
+/*        width: 200px;
+        float: right;*/
+    }
+}
+
+.page-header-base {
+    border: 3px solid;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    .border-radius(@top-left: 20px, @bottom-right: 20px);
+}
+#main .page {
+    .header {
+        .page-header-base;
+        .tagline {
+            font-size: 26px;
+        }
+        .title {
+            margin-left: 20px;
+        }
+        .fake-console {
+            padding: 10px 20px;
+            .border-radius(@bottom-right: 20px);
+        }
+    }
+    .content {
+        h1 {
+            .page-header-base;
+        }
+        h2 {
+            border: 3px solid;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding-left: 12px;
+            .border-radius(5px, 5px, 5px, 5px);
+        }
+    }
+}
+
+.footer-item {
+    margin-left: 0px;
+    font-size: 14px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 3px;
+}
+#footer {
+    text-align: center;
+    height: 125px;
+    .spacer {
+        height: 50px;
+    }
+    li {
+        display: inline;
+    }
+    .item {
+        .footer-item;
+        ul.links {
+            li {
+                .footer-item;
+            }
+            img {
+                vertical-align: middle;
+            }
+        }
+    }
+    .footerlinks li {
+    }
+}
+
+/*
 #about_iframe {
     width: 800px;
     height: 625px;
@@ -54,120 +120,7 @@ body {
 #about_iframe::-webkit-scrollbar {
     display: none;
 }
-
-/* page structural css */
-.centered-box {
-    width: 100%;
-    max-width: 960px;
-    margin: auto;
-}
-
-@media only screen and (max-width: 1320px) {
-    #right_box {
-	display: none;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .centered-box {
-	width: 100%;
-	max-width: 710px;
-	margin: auto;
-    }
-    #right_box {
-	display: none;
-    }
-}
-
-.page-header,
-.page-content h1 {
-    border: 3px solid;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding-left: 20px;
-    -webkit-border-radius: 20px 0;
-    -moz-border-radius: 20px 0;
-    border-radius: 20px 0;
-}
-
-.page-content h2 {
-    border: 3px solid;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding-left: 12px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-}
-
-/* dependent structural css */
-
-#header .gravatar {
-    vertical-align: middle;
-}
-
-#header .tagline {
-    padding: 15px;
-}
-
-#navbar li,
-#footer li {
-    display: inline;
-}
-
-.h-base(@size) {
-    font-size: @size;
-    margin: (@size / 2) 0px;
-}
-
-h1 {
-    .h-base(36px);
-}
-
-h2 {
-    .h-base(30px);
-}
-
-h3 {
-    .h-base(27px);
-}
-
-h4 {
-    .h-base(24px);
-}
-
-#navbar ul {
-    font-size: 18px;
-    padding-top: 6px;
-    padding-bottom: 6px;
-}
-
-.page-header .page-tagline {
-    font-size: 26px;
-}
-
-.navlinks li {
-    margin-left: 0px;
-    padding: 15px;
-}
-
-.footer-item,
-.footerlinks li {
-    margin-left: 0px;
-    font-size: 14px;
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-top: 3px;
-}
-
-p {
-    margin-top: 1em;
-    margin-bottom: 1em;
-}
-
-li {
-    margin-left: 1em;
-}
+*/
 
 .pagination-separator-top {
     margin-top: 20px;
@@ -180,18 +133,18 @@ li {
 .pagination {
     width: 100%;
     text-align: center;
+    .prev {
+        float: left;
+    }
+    .next {
+        float: right;
+    }
 }
 
-.pagination .prev {
-    float: left;
-}
-
-.pagination .next {
-    float: right;
-}
-
-.rounded-10 {
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
+@media only screen and (max-width: 768px) {
+    #header {
+        .dark-gray {
+            display: none;
+        }
+    }
 }

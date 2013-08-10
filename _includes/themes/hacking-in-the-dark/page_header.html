@@ -1,10 +1,13 @@
-<div class="page-header">
-  <h1>
-    {{ page.title }}
+<div class="header">
+  <div class="title">
+    <h1>{{ page.title }}</h1>
+  </div>
+  <div class="fake-console">
     {% if page.tagline %}
-    <br/>
-    <span class="page-tagline">
-      $ {{ page.tagline }}</span>
+    <span class="tagline">
+      $ {{ page.tagline }}
+    </span>
     {% endif %}
-  </h1>
+  </div>
 </div>
+

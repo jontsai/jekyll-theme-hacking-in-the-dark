@@ -6,44 +6,42 @@
     {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
     <meta name="author" content="{{ site.author.name }}">
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <script src="http://yui.yahooapis.com/3.9.1/build/yui/yui-min.js"></script>
-    <script src="{{ ASSET_PATH }}/js/site.js"></script>
+    {% include themes/hacking-in-the-dark/fragments/js/common.html %}
 
-    <!-- Le styles -->
-    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.10.0/build/cssnormalize/cssnormalize-min.css">
-    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.10.0/build/cssfonts/cssfonts-min.css">
-    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.10.0/build/cssgrids-responsive/cssgrids-responsive-min.css">
-    <link href="{{ ASSET_PATH }}/css/sticky-footer.css" rel="stylesheet" type="text/css" media="all">
-    <link href="{{ ASSET_PATH }}/css/structure.css" rel="stylesheet" type="text/css" media="all">
-    <link href="{{ ASSET_PATH }}/css/style.css" rel="stylesheet" type="text/css" media="all">
+    {% include themes/hacking-in-the-dark/fragments/css/common.html %}
 
-    <!-- Le fav and touch icons -->
+    {% comment %}fav and touch icons{% endcomment %}
     <link rel="shortcut icon" href="/img/favicon.ico">
-  <!-- Update these with your own images
+    {% comment %}
+    <!-- Update these with your own images
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
-  -->
+    -->
+    {% endcomment %}
     {% include JB/analytics %}
   </head>
 
   <body id="body" class="hackinthedark">
+    {% include themes/hacking-in-the-dark/fragments/js/facebook_sdk.html %}
 
     <div id="wrap">
       {% include themes/hacking-in-the-dark/header.html %}
       <div id="main">
-	{% include themes/hacking-in-the-dark/fragments/left_box.html %}
-	<div class="centered-box">
-          {{ content }}
-	</div>
-	{% include themes/hacking-in-the-dark/fragments/right_box.html %}
+        <div class="pure-g-r">
+          <div class="pure-u-1-5">
+	    {% include themes/hacking-in-the-dark/fragments/left_box.html %}
+          </div>
+	  <div class="pure-u-3-5">
+            {{ content }}
+	  </div>
+          <div class="pure-u-1-5">
+	    {% include themes/hacking-in-the-dark/fragments/right_box.html %}
+          </div>
+        </div>
       </div>
     </div>
     {% include themes/hacking-in-the-dark/footer.html %}
-    {% include themes/hacking-in-the-dark/fragments/olark.html %}
+    {% include themes/hacking-in-the-dark/fragments/js/non_blocking.html %}
   </body>
 </html>
