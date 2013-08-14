@@ -66,6 +66,7 @@ body {
   -webkit-border-radius: 20px 0px 20px 0px;
   -moz-border-radius: 20px 0px 20px 0px;
   border-radius: 20px 0px 20px 0px;
+  padding-left: 12px;
 }
 #main .page .content h2 {
   border: 3px solid;
