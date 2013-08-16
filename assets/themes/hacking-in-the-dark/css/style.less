@@ -1,14 +1,11 @@
 @import "_imports/colors.less";
-
-@general-font: "Palatino Linotype", Palatino, serif;
-@branding-font: Courier New, serif;
-@header-font: "Lucida Sans Unicode", "Lucida Grand", sans-serif;
+@import "_imports/fonts.less";
 
 .hackinthedark-base {
     background-color: @dark-charcoal;
     color: @white;
     font-size: 18px;
-    font-family: @general-font;
+    font-family: @serif-font;
 }
 
 .hackinthedark {
@@ -34,7 +31,7 @@
         font-weight: bold;
         font-size: 72px;
         letter-spacing: 10px;
-        font-family: @branding-font;
+        font-family: @monospace-font;
     }
 
     #header {
@@ -49,7 +46,7 @@
         }
         .tagline {
             font-style: italic;
-            font-family: @general-font;
+            font-family: @serif-font;
         }
     }
 
@@ -69,7 +66,7 @@
                 .tagline {
                     font-weight: bold;
                     font-style: normal;
-                    font-family: @branding-font;
+                    font-family: @monospace-font;
                 }
             }
         }
@@ -102,7 +99,7 @@
     h3,
     h4 {
         font-weight: bold;
-        font-family: @header-font;
+        font-family: @sans-font;
     }
 
     .pagination li {
@@ -117,12 +114,12 @@
     .pagination,
     #disqus_thread a,
     #dsq-sort-by {
-        font-family: @header-font;
+        font-family: @sans-font;
     }
 
     #dsq-comments,
     #dsq-comments a {
-        font-family: @general-font;
+        font-family: @serif-font;
     }
 
     .yui3-twitter {

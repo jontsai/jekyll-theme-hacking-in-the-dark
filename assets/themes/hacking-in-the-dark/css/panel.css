@@ -9,17 +9,15 @@ Headings - "Deep Orange" (#df8020)
 Heading Border & Trim - "Caution Orange" (#ffc40c)
 
 */
-
-@black: #000000;
-@white: #ffffff;
-@red: #ff0000;
-@green: #00ff00;
-@blue: #0000ff;
-
-@dark-charcoal: #181818;
-@dark-forest-green: #107010;
-@golf-green: #18a718;
-@deep-orange: #df8020;
-@caution-orange: #ffc40c;
-
-@dark-gray: #333333;
+.yui3-panel .yui3-widget-hd {
+  font-family: "Lucida Sans Unicode", "Lucida Grand", sans-serif;
+}
+.yui3-panel .yui3-widget-bd {
+  background-color: #000000;
+  opacity: 0.8;
+}
+.yui3-panel .yui3-widget-bd pre {
+  color: #00ff00;
+  font-family: Courier New, serif;
+  font-weight: bold;
+}
