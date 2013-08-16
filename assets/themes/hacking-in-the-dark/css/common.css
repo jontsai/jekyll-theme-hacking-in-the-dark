@@ -26,3 +26,12 @@ p {
 li {
   margin-left: 1em;
 }
+.serif {
+  font-family: "Palatino Linotype", Palatino, serif;
+}
+.sans {
+  font-family: "Lucida Sans Unicode", "Lucida Grand", sans-serif;
+}
+.monospace {
+  font-family: Courier New, serif;
+}

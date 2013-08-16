@@ -1,6 +1,12 @@
 @import "_imports/colors.less";
 @import "_imports/fonts.less";
 
+.terminal-style {
+    color: @green;
+    font-family: @monospace-font;
+    font-weight: bold;
+ }
+
 .yui3-panel {
     .yui3-widget-hd {
         font-family: @sans-font;
@@ -9,9 +15,10 @@
         background-color: @black;
         opacity: 0.8;
         pre {
-            color: @green;
-            font-family: @monospace-font;
-            font-weight: bold;
+            .terminal-style;
+        }
+        &.console {
+            .terminal-style;
         }
     }
 }

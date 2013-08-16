@@ -8,12 +8,19 @@ function ascii(c) {
     return charCode;
 }
 
-YUI().use(
+YUI({
+    modules: {
+        'web-console': {
+            fullpath: '/assets/themes/hacking-in-the-dark/js/web_console.js'
+        }
+    }
+}).use(
     'node',
     'event',
     'event-key',
     'panel',
     'dd-plugin',
+    'web-console',
 function (Y) {
     /* -------------------------------------------------- */
     /* YUI "Local" Globals */
@@ -90,6 +97,7 @@ function (Y) {
     var KEYBOARD_SHORTCUT_HANDLERS = {
         'question' : showKeyboardShortcutsHelpPanel,
         'T' : showAndExpandOlark,
+        'tilde' : showConsole,
         // sequence triggers
         'G' : queueAndCheckSequenceTrigger, // go...
         'H' : queueAndCheckSequenceTrigger, // home
@@ -157,6 +165,10 @@ function (Y) {
         olark('api.box.show');
         olark('api.box.expand');
         return false;
+    }
+
+    function showConsole() {
+        Y.WebConsole.show();
     }
 
     function queueAndCheckSequenceTrigger(keyCode) {
