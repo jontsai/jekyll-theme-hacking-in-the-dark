@@ -11,7 +11,7 @@ function ascii(c) {
 YUI({
     modules: {
         'web-console': {
-            fullpath: '/assets/themes/hacking-in-the-dark/js/web_console.js'
+            fullpath : '/assets/themes/hacking-in-the-dark/js/web_console.js'
         }
     }
 }).use(
@@ -32,9 +32,10 @@ function (Y) {
 
     // Nodes
     var main = Y.one('#main');
+    var KEYBOARD_SHORTCUTS_HELP_PANEL;
 
     // App variables
-    var KEYBOARD_SHORTCUTS_HELP_PANEL;
+    var OLARK_EXPANDED = false;
 
     // http://help.adobe.com/en_US/AS2LCR/Flash_10.0/help.html?content=00000520.html
     var KEYCODES = {
@@ -97,7 +98,7 @@ function (Y) {
     var KEYBOARD_SHORTCUT_HANDLERS = {
         'question' : showKeyboardShortcutsHelpPanel,
         'T' : showAndExpandOlark,
-        'tilde' : showConsole,
+        'tilde' : showHideConsole,
         // sequence triggers
         'G' : queueAndCheckSequenceTrigger, // go...
         'H' : queueAndCheckSequenceTrigger, // home
@@ -167,8 +168,8 @@ function (Y) {
         return false;
     }
 
-    function showConsole() {
-        Y.WebConsole.show();
+    function showHideConsole() {
+        Y.WebConsole.toggle();
     }
 
     function queueAndCheckSequenceTrigger(keyCode) {
@@ -225,8 +226,23 @@ function (Y) {
     function handleShortcutKeyPressed(e) {
         var keyCode = e.keyCode;
         var handler = getKeyboardShortcutHandler(keyCode);
-        if (handler) {
+
+        if (OLARK_EXPANDED) {
+            // do nothing while olark expanded
+        } else if (Y.WebConsole.isExpanded()) {
+            // do nothing while console is expanded, except...
+            if (handler === showHideConsole) {
+                // command received to hide console while it is expanded
+                handler(keyCode);
+            }
+        } else if (handler) {
+            var helpPanel = getKeyboardShortcutsHelpPanel();
+            if (helpPanel.get('visible')) {
+                helpPanel.hide();
+            }
             handler(keyCode);
+        } else {
+            // no know handler
         }
     }
 
@@ -239,6 +255,10 @@ function (Y) {
             }
             Y.one(document).delegate('key', handleShortcutKeyPressed, 'down:' + key, 'body');
         }
+
+        olark('api.box.onExpand', function() { OLARK_EXPANDED = true; });
+        olark('api.box.onShrink', function() { OLARK_EXPANDED = false; });
+        olark('api.box.onHide', function() { OLARK_EXPANDED = false; });
     }
 
     function init() {
