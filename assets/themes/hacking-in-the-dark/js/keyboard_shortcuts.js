@@ -234,6 +234,7 @@ function (Y) {
             if (handler === showHideConsole) {
                 // command received to hide console while it is expanded
                 handler(keyCode);
+                e.preventDefault();
             }
         } else if (handler) {
             var helpPanel = getKeyboardShortcutsHelpPanel();
@@ -241,6 +242,7 @@ function (Y) {
                 helpPanel.hide();
             }
             handler(keyCode);
+            e.preventDefault();
         } else {
             // no know handler
         }

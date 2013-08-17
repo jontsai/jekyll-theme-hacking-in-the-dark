@@ -10,7 +10,9 @@ Heading Border & Trim - "Caution Orange" (#ffc40c)
 
 */
 .terminal-style {
+  background-color: #000000;
   color: #00ff00;
+  opacity: 0.8;
   font-family: Courier New, serif;
   font-weight: bold;
 }
@@ -19,15 +21,29 @@ Heading Border & Trim - "Caution Orange" (#ffc40c)
 }
 .yui3-panel .yui3-widget-bd {
   background-color: #000000;
+  color: #00ff00;
   opacity: 0.8;
+  font-family: Courier New, serif;
+  font-weight: bold;
 }
 .yui3-panel .yui3-widget-bd pre {
+  background-color: #000000;
   color: #00ff00;
+  opacity: 0.8;
   font-family: Courier New, serif;
   font-weight: bold;
 }
-.yui3-panel .yui3-widget-bd.console {
+.yui3-panel .yui3-widget-bd.console-container {
+  height: 100%;
+}
+.yui3-panel .yui3-widget-bd .console {
+  background-color: #000000;
   color: #00ff00;
+  opacity: 0.8;
   font-family: Courier New, serif;
   font-weight: bold;
+  width: 100%;
+  height: 100%;
+  resize: none;
+  overflow: scroll;
 }
