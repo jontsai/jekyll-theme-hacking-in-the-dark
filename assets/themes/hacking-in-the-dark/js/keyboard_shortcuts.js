@@ -234,6 +234,7 @@ function (Y) {
             if (handler === showHideConsole) {
                 // command received to hide console while it is expanded
                 handler(keyCode);
+                // preventDefault to not type any shortcut keys into console
                 e.preventDefault();
             }
         } else if (handler) {
