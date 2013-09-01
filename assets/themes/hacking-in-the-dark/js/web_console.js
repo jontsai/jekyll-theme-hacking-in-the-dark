@@ -1,4 +1,5 @@
-VERSION = '0.1.3';
+APP_TITLE = 'WebConsole'
+VERSION = '0.1.4';
 AUTHOR = 'Jonathan Tsai';
 AUTHOR_EMAIL = 'akajontsai-devel@yahoo.com';
 COPYRIGHT_YEAR = 2013;
@@ -144,6 +145,10 @@ YUI.add('web-console', function (Y) {
                     }
                     var response = Y.io(uri, cfg);
                 }
+            },
+            '!' : function(args) {
+                var previousCommand = commandHistory[commandHistory.length - 2];
+                _instance.processCommand(previousCommand);
             }
         };
 
@@ -172,11 +177,22 @@ YUI.add('web-console', function (Y) {
                 };
 
                 var panel = new Y.Panel(panelCfg);
+
                 _panel = panel;
                 // set up event delegation for key events in panel
                 var boundingBox = panel.get('boundingBox');
                 boundingBox.delegate('clickoutside', function(e) { _instance.hide(); }, '*');
                 boundingBox.delegate('key', function(e) { _instance.hide(); }, 'down:esc', '*');
+
+                var headerContentParams = {
+                    app_title: APP_TITLE,
+                    version: VERSION,
+                    author: AUTHOR
+                }
+                var headerContent = Y.Lang.sub('{app_title} {version} by {author}', headerContentParams);
+                var header = boundingBox.one('.yui3-widget-hd');
+                header.setHTML(headerContent);
+
                 this.initConsole();
             }
             return _panel;
@@ -189,12 +205,13 @@ YUI.add('web-console', function (Y) {
          */
         this.initConsole = function() {
             var introParams = {
+                app_title: APP_TITLE,
                 version: VERSION,
                 author: AUTHOR,
                 author_email: AUTHOR_EMAIL,
                 copyright_year: COPYRIGHT_YEAR
             };
-            var introMessage = Y.Lang.sub('WebConsole {version} by {author} <{author_email}> (c) {copyright_year}', introParams);
+            var introMessage = Y.Lang.sub('{app_title} {version} by {author} <{author_email}> (c) {copyright_year}', introParams);
             this.cout(introMessage, false);
             this.cout('Type "help", "copyright", "credits" or "license" for more information.');
             this.cprompt();
