@@ -24,12 +24,10 @@ body {
   padding: 15px;
 }
 #main #right_box {
+  position: fixed;
   margin: 20px;
   padding: 20px;
   border: 2px solid;
-  /*        width: 200px;
-        float: right;*/
-
 }
 .page-header-base {
   border: 3px solid;
