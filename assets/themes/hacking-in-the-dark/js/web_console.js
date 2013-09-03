@@ -1,5 +1,5 @@
 APP_TITLE = 'WebConsole'
-VERSION = '0.1.4';
+VERSION = '0.1.5';
 AUTHOR = 'Jonathan Tsai';
 AUTHOR_EMAIL = 'akajontsai-devel@yahoo.com';
 COPYRIGHT_YEAR = 2013;
@@ -127,6 +127,22 @@ YUI.add('web-console', function (Y) {
                     ip = 'unknown';
                 }
                 _instance.cout('Your IP address as detected by JavaScript: ' + ip);
+            },
+            'location' : function(args) {
+                if (navigator.geolocation) {
+                    _instance.cout('Getting GPS location...');
+                    navigator.geolocation.getCurrentPosition(function(position) {
+                        var lat = position.coords.latitude;
+                        var lng = position.coords.longitude;
+                        _instance.cout('GPS: ' + lat + ', ' + lng);
+                        _instance.cprompt();
+                        if (confirm('Open in Google Maps?')) {
+                            window.open('http://maps.google.com/maps?q=' + lat + ',' + lng);
+                        }
+                    });
+                } else {
+                    _instance.cout('navigator.geolocation is not available');
+                }
             },
             'curl' : function(args) {
                 if (args.length !== 1) {
