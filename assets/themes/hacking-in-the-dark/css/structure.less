@@ -1,4 +1,5 @@
 @import "_imports/mixins.less";
+@import "_imports/vars.less";
 
 body {
     height: 100%;
@@ -6,7 +7,7 @@ body {
 }
 
 #header {
-    font-size: 18px;
+    font-size: @body-text-size;
     text-align: center;
     padding-top: 15px;
     .brand {
@@ -19,7 +20,7 @@ body {
     }
     #navbar {
         ul.navlinks {
-            font-size: 18px;
+            font-size: @body-text-size;
             padding-top: 6px;
             padding-bottom: 6px;
             li {

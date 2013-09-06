@@ -12,13 +12,13 @@ Heading Border & Trim - "Caution Orange" (#ffc40c)
 .hackinthedark-base {
   background-color: #181818;
   color: #ffffff;
-  font-size: 18px;
+  font-size: 20px;
   font-family: "Palatino Linotype", Palatino, serif;
 }
 .hackinthedark {
   background-color: #181818;
   color: #ffffff;
-  font-size: 18px;
+  font-size: 20px;
   font-family: "Palatino Linotype", Palatino, serif;
   /*
     li.active a,
@@ -35,7 +35,7 @@ Heading Border & Trim - "Caution Orange" (#ffc40c)
 .hackinthedark #wrap {
   background-color: #181818;
   color: #ffffff;
-  font-size: 18px;
+  font-size: 20px;
   font-family: "Palatino Linotype", Palatino, serif;
 }
 .hackinthedark a {
@@ -101,7 +101,7 @@ Heading Border & Trim - "Caution Orange" (#ffc40c)
 .hackinthedark #footer {
   background-color: #181818;
   color: #ffffff;
-  font-size: 18px;
+  font-size: 20px;
   font-family: "Palatino Linotype", Palatino, serif;
 }
 .hackinthedark h1,

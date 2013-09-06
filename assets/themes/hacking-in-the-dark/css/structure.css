@@ -3,7 +3,7 @@ body {
   width: 100%;
 }
 #header {
-  font-size: 18px;
+  font-size: 20px;
   text-align: center;
   padding-top: 15px;
 }
@@ -14,7 +14,7 @@ body {
   padding: 15px;
 }
 #header #navbar ul.navlinks {
-  font-size: 18px;
+  font-size: 20px;
   padding-top: 6px;
   padding-bottom: 6px;
 }
