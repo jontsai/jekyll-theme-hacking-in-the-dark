@@ -33,5 +33,5 @@ li {
   font-family: "Lucida Sans Unicode", "Lucida Grand", sans-serif;
 }
 .monospace {
-  font-family: Courier New, serif;
+  font-family: Courier New, monospace, serif;
 }

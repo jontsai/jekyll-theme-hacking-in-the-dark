@@ -54,7 +54,7 @@ Heading Border & Trim - "Caution Orange" (#ffc40c)
   font-weight: bold;
   font-size: 72px;
   letter-spacing: 10px;
-  font-family: Courier New, serif;
+  font-family: Courier New, monospace, serif;
 }
 .hackinthedark #header .brand .dark-gray {
   color: #333333;
@@ -89,7 +89,7 @@ Heading Border & Trim - "Caution Orange" (#ffc40c)
 .hackinthedark #main .page .header .fake-console .tagline {
   font-weight: bold;
   font-style: normal;
-  font-family: Courier New, serif;
+  font-family: Courier New, monospace, serif;
 }
 .hackinthedark #main .page .content h1 {
   background-color: #df8020;
