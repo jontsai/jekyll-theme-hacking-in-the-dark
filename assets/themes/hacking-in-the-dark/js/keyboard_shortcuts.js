@@ -104,7 +104,8 @@ function (Y) {
         'H' : queueAndCheckSequenceTrigger, // home
         'A' : queueAndCheckSequenceTrigger, // about
         'B' : queueAndCheckSequenceTrigger, // blog
-        'C' : queueAndCheckSequenceTrigger // code
+        'C' : queueAndCheckSequenceTrigger, // code
+        'L' : queueAndCheckSequenceTrigger // likes
     }
 
     KEY_MAP = Y.Node.DOM_EVENTS.key.eventDef.KEY_MAP;
@@ -118,8 +119,9 @@ function (Y) {
     var SHORTCUT_KEY_SEQUENCE_COMMANDS = {
         'GH' : function() { window.location = '/'; },
         'GA' : function() { window.location = '/about.html'; },
-        'GB' : function() { window.location = '/archive.html'; },
+        'GB' : function() { window.location = '/blog'; },
         'GC' : function() { window.location = '/code.html'; },
+        'GL' : function() { window.location = '/likes.html'; },
     };
 
     /* End YUI "Local" Globals */

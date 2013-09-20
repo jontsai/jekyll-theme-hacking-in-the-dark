@@ -95,8 +95,22 @@ Heading Border & Trim - "Caution Orange" (#ffc40c)
   background-color: #df8020;
   border-color: #ffc40c !important;
 }
+.hackinthedark #main .page .content h1 a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.hackinthedark #main .page .content h1 a:hover {
+  text-decoration: underline;
+}
 .hackinthedark #main .page .content h2 {
   border-color: #ffc40c !important;
+}
+.hackinthedark #main .page .content h2 a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.hackinthedark #main .page .content h2 a:hover {
+  text-decoration: underline;
 }
 .hackinthedark #footer {
   background-color: #181818;
