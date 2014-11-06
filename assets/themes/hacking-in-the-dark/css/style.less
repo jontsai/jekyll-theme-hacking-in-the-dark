@@ -7,6 +7,12 @@
     color: @white;
     font-size: @body-text-size;
     font-family: @serif-font;
+
+    html, button, input, select, textarea,
+    .pure-g [class *= "pure-u"] {
+        /* Set your content font stack here: */
+        font-family: @serif-font;
+    }
 }
 
 .hackinthedark {
@@ -52,6 +58,7 @@
     }
 
     #main {
+        #left_box,
         #right_box {
             border-color: @dark-gray;
             transition: border-color 1.5s;
@@ -152,4 +159,11 @@
             color: @black;
         }
     }
+}
+
+#button_stripe_donate {
+    color: @white;
+    font-family: @sans-font;
+    font-size: x-small;
+    font-weight: bold;
 }

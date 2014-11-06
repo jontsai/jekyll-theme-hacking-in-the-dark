@@ -23,11 +23,13 @@ body {
   margin-left: 0px;
   padding: 15px;
 }
+#main #left_box,
 #main #right_box {
   position: fixed;
   margin: 20px;
   padding: 20px;
   border: 2px solid;
+  z-index: 10;
 }
 .page-header-base {
   border: 3px solid;

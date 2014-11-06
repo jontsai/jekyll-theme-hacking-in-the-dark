@@ -15,6 +15,15 @@ Heading Border & Trim - "Caution Orange" (#ffc40c)
   font-size: 20px;
   font-family: "Palatino Linotype", Palatino, serif;
 }
+.hackinthedark-base html,
+.hackinthedark-base button,
+.hackinthedark-base input,
+.hackinthedark-base select,
+.hackinthedark-base textarea,
+.hackinthedark-base .pure-g [class*="pure-u"] {
+  /* Set your content font stack here: */
+  font-family: "Palatino Linotype", Palatino, serif;
+}
 .hackinthedark {
   background-color: #181818;
   color: #ffffff;
@@ -28,14 +37,30 @@ Heading Border & Trim - "Caution Orange" (#ffc40c)
         cursor: default;
     }
 */
-
   /* fonts */
-
+}
+.hackinthedark html,
+.hackinthedark button,
+.hackinthedark input,
+.hackinthedark select,
+.hackinthedark textarea,
+.hackinthedark .pure-g [class*="pure-u"] {
+  /* Set your content font stack here: */
+  font-family: "Palatino Linotype", Palatino, serif;
 }
 .hackinthedark #wrap {
   background-color: #181818;
   color: #ffffff;
   font-size: 20px;
+  font-family: "Palatino Linotype", Palatino, serif;
+}
+.hackinthedark #wrap html,
+.hackinthedark #wrap button,
+.hackinthedark #wrap input,
+.hackinthedark #wrap select,
+.hackinthedark #wrap textarea,
+.hackinthedark #wrap .pure-g [class*="pure-u"] {
+  /* Set your content font stack here: */
   font-family: "Palatino Linotype", Palatino, serif;
 }
 .hackinthedark a {
@@ -67,10 +92,12 @@ Heading Border & Trim - "Caution Orange" (#ffc40c)
   font-style: italic;
   font-family: "Palatino Linotype", Palatino, serif;
 }
+.hackinthedark #main #left_box,
 .hackinthedark #main #right_box {
   border-color: #333333;
   transition: border-color 1.5s;
 }
+.hackinthedark #main #left_box:hover,
 .hackinthedark #main #right_box:hover {
   border-color: #ffffff;
 }
@@ -118,6 +145,15 @@ Heading Border & Trim - "Caution Orange" (#ffc40c)
   font-size: 20px;
   font-family: "Palatino Linotype", Palatino, serif;
 }
+.hackinthedark #footer html,
+.hackinthedark #footer button,
+.hackinthedark #footer input,
+.hackinthedark #footer select,
+.hackinthedark #footer textarea,
+.hackinthedark #footer .pure-g [class*="pure-u"] {
+  /* Set your content font stack here: */
+  font-family: "Palatino Linotype", Palatino, serif;
+}
 .hackinthedark h1,
 .hackinthedark h2,
 .hackinthedark h3,
@@ -143,4 +179,10 @@ Heading Border & Trim - "Caution Orange" (#ffc40c)
 .hackinthedark .yui3-twitter li {
   list-style-type: none;
   color: #000000;
+}
+#button_stripe_donate {
+  color: #ffffff;
+  font-family: "Lucida Sans Unicode", "Lucida Grand", sans-serif;
+  font-size: x-small;
+  font-weight: bold;
 }

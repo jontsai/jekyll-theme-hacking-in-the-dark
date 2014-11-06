@@ -1,4 +1,7 @@
 <div id="right_box" class="rounded-10">
+  {% if site.author.clarityfm %}
+  {% include themes/hacking-in-the-dark/fragments/widgets/clarity_fm.html %}
+  {% endif %}
   <div class="social-buttons">
     {% include themes/hacking-in-the-dark/fragments/social/facebook_like.html %}
     <br/>
@@ -8,8 +11,13 @@
     <br/>
     {% include themes/hacking-in-the-dark/fragments/social/flattr.html %}
   </div>
-
+  <br/>
+  {% if site.author.donate_url %}
+  <a href="{{ site.author.donate_url }}" id="button_stripe_donate" class="pure-button pure-button-primary" target="_blank">
+    Make a Donation
+  </a>
+  {% endif %}
   {% if nil and site.author.twitter %}
-  {% include themes/hacking-in-the-dark/fragments/recent_tweets.html %}
+  {% include themes/hacking-in-the-dark/fragments/widgets/recent_tweets.html %}
   {% endif %}
 </div>
