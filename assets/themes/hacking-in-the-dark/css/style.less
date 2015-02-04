@@ -23,6 +23,7 @@
 
     a {
         color: @dark-forest-green;
+        transition: @link-color-transition-duration;
         &:active,
         &:hover {
             color: @golf-green;
@@ -45,7 +46,7 @@
         .brand {
             .dark-gray {
                 color: @dark-gray;
-                transition: color 1.5s;
+                transition: color @color-transition-duration;
                 &:hover {
                     color: @white;
                 }
@@ -61,7 +62,7 @@
         #left_box,
         #right_box {
             border-color: @dark-gray;
-            transition: border-color 1.5s;
+            transition: border-color @color-transition-duration;
             &:hover {
                 border-color: @white;
             }
@@ -74,7 +75,7 @@
             .fake-console {
                 background-color: @dark-charcoal;
                 opacity: 0.85;
-                transition: opacity 1.5s;
+                transition: opacity @color-transition-duration;
                 &:hover {
                     opacity: 1.0;
                 }

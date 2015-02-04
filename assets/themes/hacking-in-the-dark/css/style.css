@@ -9,6 +9,7 @@ Headings - "Deep Orange" (#df8020)
 Heading Border & Trim - "Caution Orange" (#ffc40c)
 
 */
+/* transition durations */
 .hackinthedark-base {
   background-color: #181818;
   color: #ffffff;
@@ -65,6 +66,7 @@ Heading Border & Trim - "Caution Orange" (#ffc40c)
 }
 .hackinthedark a {
   color: #107010;
+  transition: 0.2s;
 }
 .hackinthedark a:active,
 .hackinthedark a:hover {
@@ -83,7 +85,7 @@ Heading Border & Trim - "Caution Orange" (#ffc40c)
 }
 .hackinthedark #header .brand .dark-gray {
   color: #333333;
-  transition: color 1.5s;
+  transition: color 0.8s;
 }
 .hackinthedark #header .brand .dark-gray:hover {
   color: #ffffff;
@@ -95,7 +97,7 @@ Heading Border & Trim - "Caution Orange" (#ffc40c)
 .hackinthedark #main #left_box,
 .hackinthedark #main #right_box {
   border-color: #333333;
-  transition: border-color 1.5s;
+  transition: border-color 0.8s;
 }
 .hackinthedark #main #left_box:hover,
 .hackinthedark #main #right_box:hover {
@@ -108,7 +110,7 @@ Heading Border & Trim - "Caution Orange" (#ffc40c)
 .hackinthedark #main .page .header .fake-console {
   background-color: #181818;
   opacity: 0.85;
-  transition: opacity 1.5s;
+  transition: opacity 0.8s;
 }
 .hackinthedark #main .page .header .fake-console:hover {
   opacity: 1.0;
