@@ -22,25 +22,21 @@ body {
   overflow: auto;
   padding-bottom: 125px;
   /* must be same height as the footer */
-
 }
 #footer {
   position: relative;
   margin-top: -125px;
   /* negative value of footer height */
-
   height: 125px;
   clear: both;
 }
 /*Opera Fix*/
 body:before {
   /* thanks to Maleika (Kohoutec)*/
-
   content: "";
   height: 100%;
   float: left;
   width: 0;
   margin-top: -32767px;
   /* thank you Erik J - negate effect of float*/
-
 }

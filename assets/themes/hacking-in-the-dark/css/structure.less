@@ -36,11 +36,20 @@ body {
     @side-margin-content-z-index: 10;
     #left_box,
     #right_box {
-        position: fixed;
-        margin: 20px;
-        padding: 20px;
+        @padding: 20px;
+        @padding-2x: 2 * @padding;
+        margin: 10px auto;
+        padding: @padding;
+        width: @sidebox-width;
+        max-width: 75%;
+        max-width: ~"calc(100% - @{padding-2x})";
+        overflow: hidden;
         border: 2px solid;
         z-index: 10;
+        &.below-fold {
+            position: fixed;
+            top: 0px;
+        }
     }
 }
 
@@ -142,9 +151,34 @@ body {
     }
 }
 
-@media only screen and (max-width: 768px) {
+/* -------------------------------------------------- */
+/* Responsive CSS @media queries
+/* -------------------------------------------------- */
+
+@media screen and (max-width: (@sm-width - 1)) {
+    #main_content {
+        padding: 0px 10px;
+    }
+    .github-banner {
+        display: none;
+    }
+}
+
+@media screen and (max-width: (@md-width - 1)) {
     #header {
         .dark-gray {
+            display: none;
+        }
+    }
+    .no-mobile, [id^="habla_"] {
+        display: none;
+    }
+}
+
+@media screen and (max-width: (@hd-720p-width - 1)) {
+    #main {
+        #left_box,
+        #right_box {
             display: none;
         }
     }

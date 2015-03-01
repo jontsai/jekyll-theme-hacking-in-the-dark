@@ -1,7 +1,7 @@
 <header>
   <div id="header">
     {% if site.author.github %}
-    <a href="http://github.com/{{ site.author.github }}"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub" /></a>
+    <a href="http://github.com/{{ site.author.github }}" class="github-banner" title="{{ site.author.github }} on GitHub"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub" /></a>
     {% endif %}
 
     <a class="brand" href="{{ HOME_PATH }}" title="{{ site.title }}">
