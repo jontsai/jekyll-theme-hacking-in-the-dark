@@ -31,11 +31,11 @@ body {
 #main #left_box,
 #main #right_box {
   margin: 10px auto;
-  padding: 20px;
+  padding: 10px;
   width: 220px;
-  max-width: 75%;
-  max-width: calc(100% - 40px);
-  overflow: hidden;
+  /*        max-width: 75%;*/
+  max-width: calc(100% - 20px);
+  /*        overflow: hidden;*/
   border: 2px solid;
   z-index: 10;
 }
