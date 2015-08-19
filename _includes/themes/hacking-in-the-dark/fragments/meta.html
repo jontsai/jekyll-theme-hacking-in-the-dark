@@ -1,0 +1,17 @@
+<meta charset="utf-8">
+<title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+{% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+<meta name="author" content="{{ site.author.name }}">
+{% comment %}----- Site Verifications -----{% endcomment %}
+{% if site.verifications.alexa %}
+<meta name="alexaVerifyID" content="{{ site.verifications.alexa }}"/>
+{% endif %}
+{% if site.verifications.bing %}
+<meta name="msvalidate.01" content="{{ site.verifications.bing }}" />
+{% endif %}
+{% if site.verifications.google %}
+<meta name="google-site-verification" content="{{ site.verifications.google }}" />
+{% endif %}
+{% if site.verifications.yandex %}
+<meta name='yandex-verification' content="{{ site.verifications.yandex }}" />
+{% endif %}
