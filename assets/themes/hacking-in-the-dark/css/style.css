@@ -10,6 +10,7 @@ Heading Border & Trim - "Caution Orange" (#ffc40c)
 
 */
 /* http://en.wikipedia.org/wiki/Computer_display_standard#WXGA */
+/* http://purecss.io/grids/ */
 /* dimensions */
 /* widgets */
 /* transition durations */
@@ -96,6 +97,9 @@ Heading Border & Trim - "Caution Orange" (#ffc40c)
 .hackinthedark #header .tagline {
   font-style: italic;
   font-family: "Palatino Linotype", Palatino, serif;
+}
+.hackinthedark #header .tagline .attribution {
+  font-style: normal;
 }
 .hackinthedark #main #left_box,
 .hackinthedark #main #right_box {

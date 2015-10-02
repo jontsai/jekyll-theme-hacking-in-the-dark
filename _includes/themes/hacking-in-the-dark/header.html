@@ -11,7 +11,12 @@
 
     {% if site.tagline %}
     <div class="tagline">
-      "{{ site.tagline }}"
+      {{ site.tagline }}
+      {% if site.tagline_attribution %}
+      <span class="attribution">
+        ({{ site.tagline_attribution }})
+      </span>
+      {% endif %}
     </div>
     {% endif %}
     <div id="navbar">
