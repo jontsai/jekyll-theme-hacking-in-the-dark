@@ -1,0 +1,494 @@
+.rounded-10 {
+  -webkit-border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 10px 10px;
+}
+h1 {
+  font-size: 36px;
+  margin: 12px 0px;
+}
+h2 {
+  font-size: 30px;
+  margin: 10px 0px;
+}
+h3 {
+  font-size: 27px;
+  margin: 9px 0px;
+}
+h4 {
+  font-size: 24px;
+  margin: 8px 0px;
+}
+p {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+li {
+  margin-left: 1em;
+}
+.serif {
+  font-family: "Palatino Linotype", Palatino, serif;
+}
+.sans {
+  font-family: "Lucida Sans Unicode", "Lucida Grand", sans-serif;
+}
+.monospace {
+  font-family: Courier New, monospace, serif;
+}
+/*
+
+http://www.colourlovers.com/palette/2080987/HackingIntheDark
+Background - "Dark Charcoal" (#181818)
+Foreground text - White (#ffffff)
+Links - "Dark Forest Green" (#107010)
+Hover Links - "Golf Green" (#18a718)
+Headings - "Deep Orange" (#df8020)
+Heading Border & Trim - "Caution Orange" (#ffc40c)
+
+*/
+.terminal-style {
+  background-color: #000000;
+  color: #00ff00;
+  opacity: 0.8;
+  font-family: Courier New, monospace, serif;
+  font-weight: bold;
+}
+.yui3-panel .yui3-widget-hd {
+  font-family: "Lucida Sans Unicode", "Lucida Grand", sans-serif;
+}
+.yui3-panel .yui3-widget-bd {
+  background-color: #000000;
+  color: #00ff00;
+  opacity: 0.8;
+  font-family: Courier New, monospace, serif;
+  font-weight: bold;
+}
+.yui3-panel .yui3-widget-bd pre {
+  background-color: #000000;
+  color: #00ff00;
+  opacity: 0.8;
+  font-family: Courier New, monospace, serif;
+  font-weight: bold;
+}
+.yui3-panel .yui3-widget-bd.console-container {
+  height: 100%;
+}
+.yui3-panel .yui3-widget-bd .console {
+  background-color: #000000;
+  color: #00ff00;
+  opacity: 0.8;
+  font-family: Courier New, monospace, serif;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+  resize: none;
+  overflow: scroll;
+}
+/*  
+Sticky Footer Solution
+by Steve Hatcher 
+http://stever.ca
+http://www.cssstickyfooter.com
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+/* must declare 0 margins on everything, also for main layout components use padding, not 
+vertical margins (top and bottom) to add spacing, else those margins get added to total height 
+and your footer gets pushed down a bit more, creating vertical scroll bars in the browser */
+html,
+body {
+  height: 100%;
+}
+#wrap {
+  min-height: 100%;
+}
+#main {
+  overflow: auto;
+  padding-bottom: 125px;
+  /* must be same height as the footer */
+}
+#footer {
+  position: relative;
+  margin-top: -125px;
+  /* negative value of footer height */
+  height: 125px;
+  clear: both;
+}
+/*Opera Fix*/
+body:before {
+  /* thanks to Maleika (Kohoutec)*/
+  content: "";
+  height: 100%;
+  float: left;
+  width: 0;
+  margin-top: -32767px;
+  /* thank you Erik J - negate effect of float*/
+}
+/* http://en.wikipedia.org/wiki/Computer_display_standard#WXGA */
+/* http://purecss.io/grids/ */
+/* dimensions */
+/* widgets */
+/* transition durations */
+body {
+  height: 100%;
+  width: 100%;
+}
+#header {
+  font-size: 20px;
+  text-align: center;
+  padding-top: 15px;
+}
+#header .gravatar {
+  vertical-align: middle;
+}
+#header .tagline {
+  padding: 15px;
+}
+#header #navbar ul.navlinks {
+  font-size: 20px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+#header #navbar ul.navlinks li {
+  display: inline;
+  margin-left: 0px;
+  padding: 15px;
+}
+#main #left_box,
+#main #right_box {
+  margin: 10px auto;
+  padding: 10px;
+  width: 220px;
+  /*        max-width: 75%;*/
+  max-width: calc(100% - 20px);
+  /*        overflow: hidden;*/
+  border: 2px solid;
+  z-index: 10;
+}
+#main #left_box.below-fold,
+#main #right_box.below-fold {
+  position: fixed;
+  top: 0px;
+}
+.page-header-base {
+  border: 3px solid;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  -webkit-border-radius: 20px 0px 20px 0px;
+  -moz-border-radius: 20px 0px 20px 0px;
+  border-radius: 20px 0px 20px 0px;
+}
+#main .page .header {
+  border: 3px solid;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  -webkit-border-radius: 20px 0px 20px 0px;
+  -moz-border-radius: 20px 0px 20px 0px;
+  border-radius: 20px 0px 20px 0px;
+}
+#main .page .header .tagline {
+  font-size: 26px;
+}
+#main .page .header .title {
+  margin-left: 20px;
+}
+#main .page .header .fake-console {
+  padding: 10px 20px;
+  -webkit-border-radius: 0px 0px 20px 0px;
+  -moz-border-radius: 0px 0px 20px 0px;
+  border-radius: 0px 0px 20px 0px;
+}
+#main .page .content h1 {
+  border: 3px solid;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  -webkit-border-radius: 20px 0px 20px 0px;
+  -moz-border-radius: 20px 0px 20px 0px;
+  border-radius: 20px 0px 20px 0px;
+  padding-left: 12px;
+}
+#main .page .content h2 {
+  border: 3px solid;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-left: 12px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+}
+.footer-item {
+  margin-left: 0px;
+  font-size: 14px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 3px;
+}
+#footer {
+  text-align: center;
+  height: 125px;
+}
+#footer .spacer {
+  height: 50px;
+}
+#footer li {
+  display: inline;
+}
+#footer .item {
+  margin-left: 0px;
+  font-size: 14px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 3px;
+}
+#footer .item ul.links li {
+  margin-left: 0px;
+  font-size: 14px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 3px;
+}
+#footer .item ul.links img {
+  vertical-align: middle;
+}
+/*
+#about_iframe {
+    width: 800px;
+    height: 625px;
+    overflow: hidden;
+    border: none;
+}
+
+#about_iframe::-webkit-scrollbar {
+    display: none;
+}
+*/
+.pagination-separator-top {
+  margin-top: 20px;
+}
+.pagination-separator-bottom {
+  margin-bottom: 10px;
+}
+.pagination {
+  width: 100%;
+  text-align: center;
+}
+.pagination .prev {
+  float: left;
+}
+.pagination .next {
+  float: right;
+}
+/* -------------------------------------------------- */
+/* Responsive CSS @media queries
+/* -------------------------------------------------- */
+@media screen and (max-width: 34.5em) {
+  #main_content {
+    padding: 0px 10px;
+  }
+  .github-banner {
+    display: none;
+  }
+}
+@media screen and (max-width: 47em) {
+  #header .dark-gray {
+    display: none;
+  }
+  .no-mobile,
+  [id^="habla_"] {
+    display: none;
+  }
+}
+@media screen and (max-width: 1365px) {
+  #main #left_box,
+  #main #right_box {
+    display: none;
+  }
+}
+.hackinthedark-base {
+  background-color: #181818;
+  color: #ffffff;
+  font-size: 20px;
+  font-family: "Palatino Linotype", Palatino, serif;
+}
+.hackinthedark-base html,
+.hackinthedark-base button,
+.hackinthedark-base input,
+.hackinthedark-base select,
+.hackinthedark-base textarea,
+.hackinthedark-base .pure-g [class*="pure-u"] {
+  /* Set your content font stack here: */
+  font-family: "Palatino Linotype", Palatino, serif;
+}
+.hackinthedark {
+  background-color: #181818;
+  color: #ffffff;
+  font-size: 20px;
+  font-family: "Palatino Linotype", Palatino, serif;
+  /*
+    li.active a,
+    li.active a:hover {
+        color: @white;
+        text-decoration: none;
+        cursor: default;
+    }
+*/
+  /* fonts */
+}
+.hackinthedark html,
+.hackinthedark button,
+.hackinthedark input,
+.hackinthedark select,
+.hackinthedark textarea,
+.hackinthedark .pure-g [class*="pure-u"] {
+  /* Set your content font stack here: */
+  font-family: "Palatino Linotype", Palatino, serif;
+}
+.hackinthedark #wrap {
+  background-color: #181818;
+  color: #ffffff;
+  font-size: 20px;
+  font-family: "Palatino Linotype", Palatino, serif;
+}
+.hackinthedark #wrap html,
+.hackinthedark #wrap button,
+.hackinthedark #wrap input,
+.hackinthedark #wrap select,
+.hackinthedark #wrap textarea,
+.hackinthedark #wrap .pure-g [class*="pure-u"] {
+  /* Set your content font stack here: */
+  font-family: "Palatino Linotype", Palatino, serif;
+}
+.hackinthedark a {
+  color: #107010;
+  transition: 0.2s;
+}
+.hackinthedark a:active,
+.hackinthedark a:hover {
+  color: #18a718;
+}
+.hackinthedark .brand,
+.hackinthedark a.brand,
+.hackinthedark a.brand:active,
+.hackinthedark a.brand:hover {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 72px;
+  letter-spacing: 10px;
+  font-family: Courier New, monospace, serif;
+}
+.hackinthedark #header .brand .dark-gray {
+  color: #333333;
+  transition: color 0.8s;
+}
+.hackinthedark #header .brand .dark-gray:hover {
+  color: #ffffff;
+}
+.hackinthedark #header .tagline {
+  font-style: italic;
+  font-family: "Palatino Linotype", Palatino, serif;
+}
+.hackinthedark #header .tagline .attribution {
+  font-style: normal;
+}
+.hackinthedark #main #left_box,
+.hackinthedark #main #right_box {
+  border-color: #333333;
+  transition: border-color 0.8s;
+}
+.hackinthedark #main #left_box:hover,
+.hackinthedark #main #right_box:hover {
+  border-color: #ffffff;
+}
+.hackinthedark #main .page .header {
+  background-color: #df8020;
+  border-color: #ffc40c !important;
+}
+.hackinthedark #main .page .header .fake-console {
+  background-color: #181818;
+  opacity: 0.85;
+  transition: opacity 0.8s;
+}
+.hackinthedark #main .page .header .fake-console:hover {
+  opacity: 1.0;
+}
+.hackinthedark #main .page .header .fake-console .tagline {
+  font-weight: bold;
+  font-style: normal;
+  font-family: Courier New, monospace, serif;
+}
+.hackinthedark #main .page .content h1 {
+  background-color: #df8020;
+  border-color: #ffc40c !important;
+}
+.hackinthedark #main .page .content h1 a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.hackinthedark #main .page .content h1 a:hover {
+  text-decoration: underline;
+}
+.hackinthedark #main .page .content h2 {
+  border-color: #ffc40c !important;
+}
+.hackinthedark #main .page .content h2 a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.hackinthedark #main .page .content h2 a:hover {
+  text-decoration: underline;
+}
+.hackinthedark #footer {
+  background-color: #181818;
+  color: #ffffff;
+  font-size: 20px;
+  font-family: "Palatino Linotype", Palatino, serif;
+}
+.hackinthedark #footer html,
+.hackinthedark #footer button,
+.hackinthedark #footer input,
+.hackinthedark #footer select,
+.hackinthedark #footer textarea,
+.hackinthedark #footer .pure-g [class*="pure-u"] {
+  /* Set your content font stack here: */
+  font-family: "Palatino Linotype", Palatino, serif;
+}
+.hackinthedark h1,
+.hackinthedark h2,
+.hackinthedark h3,
+.hackinthedark h4 {
+  font-weight: bold;
+  font-family: "Lucida Sans Unicode", "Lucida Grand", sans-serif;
+}
+.hackinthedark .pagination li {
+  display: inline;
+  list-style-type: none;
+}
+.hackinthedark .navlinks,
+.hackinthedark .footerlinks,
+.hackinthedark .pagination,
+.hackinthedark #disqus_thread a,
+.hackinthedark #dsq-sort-by {
+  font-family: "Lucida Sans Unicode", "Lucida Grand", sans-serif;
+}
+.hackinthedark #dsq-comments,
+.hackinthedark #dsq-comments a {
+  font-family: "Palatino Linotype", Palatino, serif;
+}
+.hackinthedark .yui3-twitter li {
+  list-style-type: none;
+  color: #000000;
+}
+#button_stripe_donate {
+  color: #ffffff;
+  font-family: "Lucida Sans Unicode", "Lucida Grand", sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+}
+.quora-link {
+  background-color: #b92b27;
+  color: #fff !important;
+  font-family: proxima-nova, Helvetica, Arial, sans-serif;
+}
