@@ -1,0 +1,9 @@
+{
+	"name": "gallery-paginator",
+	"displayName": "Paginator Port",
+	"description": "An unofficial port of the YUI 2 Paginator.",
+	"author": "jafl",
+
+	"use": ["gallery-paginator"],
+	"tags": ["jafl","paginator","pagination"]
+}

@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+    
+    <head>
+        <title>gallery-y-common-ractive</title>
+        <script src="/build/yui/yui.js"></script>
+        <script src="/build/gallery-y-common-ractive/gallery-y-common-ractive.js"></script>
+        <script src="js/tests.js"></script>
+        <meta charset="utf-8" />
+    </head>
+    <style>
+        #el {
+            display: none;
+        }
+        .ractive-ready {
+            display: block !important;
+        }
+    </style>
+    <body class="yui3-skin-sam">
+        <div id="logger"></div>
+        <div id="el">
+            <h1>TEST CODE</h1>
+            {{^signedIn}}
+                <!-- message for non-signed-in users -->
+                <p>Hi there! Please
+                    <a class='button' on-click='signIn'>sign in</a>
+                </p>
+            {{/signedIn}}
+            {{#signedIn}}
+                <!-- message for signed-in users -->
+                <p>Welcome back, {{username}}!</p>
+                <img decorator="imgSrc:'{{base}}48x48'"/>
+            {{/signedIn}}
+            <div class="style-test" decorator="style: 'background: url({{base}}48x48)'" style="width: 400px; height: 200px;"></div>
+        </div>
+        <script>
+            YUI({
+                coverage: ['gallery-y-common-ractive'],
+                filter: (window.location.search.match(/[?&]filter=([^&]+)/) || [])[1] || 'raw'
+            }).use('test-console', 'test', 'module-tests', 'gallery-y-common-ractive', function(Y) {
+
+                var ractive = new Y.Common.Ractive({
+                    container: Y.one('#el'),
+                    data: {
+                        signedIn: false,
+                        base: 'http://placehold.it/'
+                    },
+                    decorators: {
+                        imgSrc: Y.Common.RactiveDecorators.imgSource,
+                        style: Y.Common.RactiveDecorators.style
+                    },
+                    complete: function() {
+                        console.info('completed 2');
+                    }
+                });
+                ractive.on('signIn', function() {
+                    var name = prompt('Enter your username to sign in', 'ractive_fan');
+
+                    ractive.set({
+                        username: name,
+                        signedIn: true,
+                        notSignedIn: false
+                    });
+                });
+
+                (new Y.Test.Console()).render('#logger');
+
+                Y.Test.Runner.setName('gallery-y-common-ractive');
+                Y.Test.Runner.run();
+            });
+        </script>
+    </body>
+
+</html>

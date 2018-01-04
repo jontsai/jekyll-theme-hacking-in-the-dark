@@ -1,0 +1,153 @@
+<h2>History</h2>
+<h3>nighty</h3>
+<h4>for test, only on github, not on cdn</h4>
+<ul>
+ <li>container: fix for IE7 marginTop bug</li>
+ <li>pushpop: move nativeScroll attrs/functions from page to pushpop</li>
+ <li>core: remove topScroll support</li>
+ <li>container: remove disabled scrollView when in nativeScroll mode to boost performance for page widget</li>
+ <li>device: improve positionFixed detection</li>
+ <li>device: add scrollTo support</li>
+ <li>device: add getScrollBase support</li>
+ <li>device: add getScrollY support</li>
+ <li>pushpop: add scrollTo support</li>
+ <li>page: move scrollTo, getScrollY support to pushpop or device</li>
+ <li>shortcut: start to support nativeScroll</li>
+ <li>overlay: start to support nativeScroll</li>
+ <li>container: support updateContentSize</li>
+ <li>pushpop: support updateContentSize</li>
+</ul>
+
+<h3>0.2.0</h3>
+<h4>2013-02-28</h4>
+<ul>
+ <li>container: fix for scroll into hidden region bug in IE7</li>
+ <li>shortcut: fix for zIndex bug in IE7</li>
+ <li>carousel: fix for layout issue in IE7</li>
+ <li>container: fix for overlaped region with fixed header in IE7</li>
+ <li>page: add getScrollY static mathod</li>
+ <li>page: add onScroll static mathod</li>
+ <li>core: fix js error in nativeScroll mode</li>
+ <li>photogrid: support bpg_render class name switching</li>
+ <li>photogrid: support bpg_error class name on module when image error</li>
+ <li>overlay: fix for iphone scrollTo(0,0) bug when hide overlay</li>
+ <li>page: fix nativeScroll mode for IE10 touch device</li>
+ <li>overlay: stop scrollBar support for none touch device</li>
+ <li>core: tested and works well on windows phone now</li>
+</ul>
+
+<h3>0.1.8</h3>
+<h4>2013-02-13</h4>
+<ul>
+ <li>carousel: fix for no _cAxis bug</li>
+ <li>slidetab: fix for no _cAxis bug</li>
+ <li>core: fix styles for IE7</li>
+</ul>
+
+<h3>0.1.7</h3>
+<h4>2013-02-07</h4>
+<ul>
+ <li>core: yogi migration, now build with yogi</li>
+ <li>core: support yui 3.7+</li>
+ <li>pushpop: fix for push then pop soon then js error bug</li>
+ <li>ui components: add a new component - switcher</li>
+ <li>photogrid: fix for append bug when column height larger then 9999 pixels</li>
+ <li>overlay: fix position shifting bug when native page size changed bug</li>
+ <li>page: fix mousewheel blocked bug when in native scroll mode</li>
+ <li>container: fix for desktop scrollview stop scrolling bug</li>
+ <li>core: better page layout when running desktop (hidden overlay and shortcut will not take place of a page before init)</li>
+</ul>
+
+<h3>0.1.6</h3>
+<h4>2012-12-20</h4>
+<ul>
+ <li>all: lots of jslint fix</li>
+ <li>photogrid: fix for IE9 rendering problem</li>
+</ul>
+
+<h3>0.1.5</h3>
+<h4>2012-12-13</h4>
+<ul>
+ <li>syncscroll: fix parent scroll detect bug for lazy load case</li>
+ <li>viewer: fix sync page size bug when lazy load images</li>
+ <li>container: jslint fix</li>
+ <li>photogrid: jslint fix</li>
+ <li>loader: support SUCCESSCB and FAILURECB</li>
+</ul>
+
+<h3>0.1.4</h3>
+<h4>2012-12-06</h4>
+<ul>
+ <li>container: fix container js error when no footer node</li>
+ <li>slidetab: support lazy load</li>
+ <li>container: fix fullHeight height bug when header is fixed position or in nativeScroll mode</li>
+ <li>photogrid: fix rendering bug in IE</li>
+ <li>core: support Y.Bottle.lazyLoad()</li>
+ <li>shortcut: fix window resize bug (occured when only width or height changed)</li>
+ <li>pushpop: delay init children for better performance</li>
+ <li>page: fix scrollTo() in native scroll mode</li>
+ <li>photogrid: fix style bug in IE6</li>
+ <li>viewer: fix scroll size sync error for none native scroll page</li>
+ <li>pushpop: prevent topScroll bug when delay init children</li>
+ <li>container: better focused input support for native scroll mode</li>
+ <li>viewer: prevent default when click + / - button</li>
+ <li>overlay: better keyboard support (use fixed position when available)</li>
+ <li>shortcut: better keyboard support (use fixed position when available)</li>
+ <li>page: add updateContent() support</li>
+</ul>
+
+<h3>0.1.3</h3>
+<h4>2012-11-01</h4>
+<ul>
+ <li>page: now nativeScroll mode the fixed header/footer style missing in Android devices bug fixed.</li>
+ <li>overlay: now the bug of overlay size when using btHideSCO skin is fixed.</li>
+ <li>device: fix getBrowserWidth and getBrowserHeight for IE</li>
+ <li>core: IE7+ support, fix javascript error when init()</li>
+ <li>skin: fix shortcut/overlay mask opacity for IE7-</li>
+ <li>core: auto hide header/footer when input focused (position:fixed work around)</li>
+ <li>core: auto adjust overlay/shortcut size when input blur</li>
+ <li>page: add scrollTo() support</li>
+ <li>container: add fullHeight support, default is true</li>
+</ul>
+
+<h3>0.1.2</h3>
+<h4>2012-10-04</h4>
+<ul>
+ <li>overlay: core show()/hide() rewrite, prevent floating number position and transition bugs</li>
+ <li>container: delay 1ms to sync scrollView height when setting container height to prevent css related bug</li>
+ <li>container: now use Y.zui.ScrollHelper on none touch device browsers to resolve 'dragging on image' bug</li>
+ <li>carousel: now use Y.zui.ScrollHelper on none touch device browsers to resolve 'dragging on image' bug</li>
+ <li>page: start to support native browser scroll, which gets pretty good performance improvement</li>
+ <li>syncscroll: remove autoWidth attribute, now Bottle will auto handle widget size in all 3 modes: 'with page scrollView', 'with page nativeScroll', 'without page'</li>
+</ul>
+
+<h3>0.1.1</h3>
+<h4>2012-09-20</h4>
+<ul>
+ <li>shortcut: fix align bug when hide browser URL bar</li>
+ <li>slidetab: fix page position bug when using webkit browsers</li>
+ <li>overlay: use standard zIndex attribute when init, and do not touch zIndex when show() and hide()</li>
+ <li>pushpop: fix push() / pop() bug when the widget is not visible</li>
+</ul>
+
+<h3>0.1.0</h3>
+<h4>2012-09-13</h4>
+<ul>
+ <li>skins: port css module to standard yui3 skin</li>
+ <li>loader: new widget</li>
+</ul>
+
+<h3>0.0.2</h3>
+<h4>2012-09-01</h4>
+<ul>
+ <li>slideTab: better snap logic</li>
+ <li>carousel: better snap logic</li>
+ <li>skins: add initializing skins</li>
+</ul>
+
+<h3>0.0.1</h3>
+<h4>2012-08-15</h4>
+<ul>
+ <li>initial version</li>
+ <li>port to yui-gallery</li>
+</ul>

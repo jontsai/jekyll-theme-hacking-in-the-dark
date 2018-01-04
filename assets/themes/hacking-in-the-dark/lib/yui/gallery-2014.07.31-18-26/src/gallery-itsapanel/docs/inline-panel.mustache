@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.2.1/pure-min.css">
+
+<div class="intro">
+    <p>
+        {{description}}
+    </p>
+</div>
+
+<style type="text/css">
+{{>inline-panel-css}}
+</style>
+
+{{>inline-panel-html}}
+
+<h2>Complete Example Source</h2>
+```
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.2.1/pure-min.css">
+
+<style type="text/css">
+{{>inline-panel-css}}
+</style>
+
+<body>
+
+{{>inline-panel-html}}
+
+<script>
+{{>inline-panel-js}}
+</script>
+
+</body>
+```
+
+<script>
+{{>init-loaderconfig-js}}
+{{>loaderconfig-js}}
+{{>inline-panel-js}}
+</script>

@@ -1,0 +1,132 @@
+<!doctype html>
+
+<html lang='en'>
+
+  <head>
+    <title>Primrose acceptance</title>
+  </head>
+
+  <body>
+    <script src="http://yui.yahooapis.com/3.7.3/build/yui/yui-min.js"></script>
+    <script>
+
+      YUI.add('matcher-spec', function (Y) {
+        var P           = Y.Primrose, 
+            describe    = P.describe, 
+            beforeEach  = P.beforeEach,
+            spyOn       = P.spyOn,
+            it          = P.it;
+
+        describe('Matchers', function () {
+
+          describe('toBe', function () {
+            it('asserts simple matches', function (expect) {
+              expect( 1 ).toBe( 1 );
+              expect( 1 ).not().toBe( 2 );
+            });
+          });
+
+          describe('toBeTypeof', function () {
+            it('assets the type', function (expect) {
+              expect( "mystr" ).toBeTypeof( "string" );
+            });
+          });
+
+          describe('toMatch', function () {
+            it('matches a regex', function (expect) {
+              expect( 'foo' ).toMatch( /foo/ );
+              expect( 'bar' ).not().toMatch( /foo/ );
+            });
+          });
+
+          describe('toBeDefined', function () {
+            it('checks if defined', function (expect) {
+              var foo = 1;
+
+              expect( foo ).toBeDefined();
+              expect( undefined ).not().toBeDefined();
+            });
+          });
+
+          describe('toBeUndefined', function () {
+            it('checks if undefined', function (expect) {
+              var bar = 1;
+
+              expect( undefined ).toBeUndefined();
+              expect( bar ).not().toBeUndefined();
+            });
+          });
+
+          describe('toBeNaN', function () {
+            it('checks if NaN', function (expect) {
+              expect( 'str' ).toBeNaN();
+              expect( 1 ).not().toBeNaN();
+            });
+          });
+          
+          describe('toContain', function () {
+            describe('with an array', function () {
+              it('checks if it contains the element', function (expect) {
+                expect( ['foo', 'bar'] ).toInclude('bar');
+                expect( ['foo', 'bar'] ).not().toInclude('baz');
+              });
+            });
+
+            describe('with a string', function () {
+              it('checks if it contains the substring', function (expect) {
+                expect( 'foobar' ).toInclude('bar');
+                expect( 'foobar' ).not().toInclude('baz');
+              });
+            });
+          });
+        });
+
+        describe('Spies', function () {
+          describe('methodSpy', function () {
+            it('works', function (expect) {
+              var obj = {
+                meth: function () {}
+              };
+
+              var spy = spyOn( obj, 'method', 'meth' );
+
+              obj.meth();
+
+              expect( spy.get('occurrences') ).toBe( 1 );
+            });
+          });
+        });
+
+      });
+
+      YUI.add('modular-spec', function (Y) {
+        var P = Y.Primrose, 
+            describe = P.describe, 
+            beforeEach = P.beforeEach,
+            it = P.it;
+
+        describe('Modular', function () {
+          describe('x', function () {
+            it('is b', function (expect) {
+              expect( 1 ).toBe( 1 );
+            });
+          });
+        });
+
+      });
+
+      YUI({
+        modules: {
+          'gallery-primrose': {
+            fullpath: '../../../build/gallery-primrose/gallery-primrose.js'
+          }
+        }
+      }).use('gallery-primrose', 'node', 'matcher-spec', 'modular-spec', function (Y) {
+
+        Y.Primrose.addReporter(new Y.Primrose.LogReporter());
+
+        Y.Primrose.run();
+      });
+    </script>
+  </body>
+</html>

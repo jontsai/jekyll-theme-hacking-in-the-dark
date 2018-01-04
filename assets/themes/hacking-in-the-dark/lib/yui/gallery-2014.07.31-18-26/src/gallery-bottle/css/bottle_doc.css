@@ -1,0 +1,136 @@
+#hd {
+    margin: auto;
+    max-width: 1200px;
+    min-width: 960px;
+    border-bottom: 1px solid #aaa;
+    font-size: 138.462%;
+}
+
+#hd ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#hd li {
+    margin:0 10px 0 0;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+}
+
+#hd li:nth-child(n) {
+    margin: 4px 4px 4px 0;
+}
+
+#hd li:nth-child(n + 2) {
+    padding: 0 0 0 10px;
+    border-left:1px solid #ccc;
+}
+
+#ft {
+    border-top:3px double #ccc;
+}
+
+pre.code {
+    clear:both;
+}
+
+h3 {
+    color:#c84;
+}
+
+div.video a {
+    display:none;
+}
+
+div.video {
+    float:right;
+}
+
+body.btInit {
+    background:#aaa;
+}
+
+body.btInit div.video {
+    float: none;
+    display: inline;
+}
+
+body.btInit div.video a {
+    display: inline;
+}
+
+body.btInit div.video iframe {
+    display: none;
+}
+
+.btInit #doc {
+    background:#fff;
+    padding:0;
+    min-width:0;
+    max-width:100%;
+}
+
+.btInit #hd {
+    min-width:0;
+    max-width:100%;
+}
+
+.btInit .yui3-u-3-4,
+.btInit .yui3-u-1-4 {
+    display:block;
+    width:auto;
+}
+
+.btInit h1 {
+    text-align:center;
+}
+
+.btInit h1,
+.btInit .content,
+.btInit .sidebar {
+    padding:0;
+}
+
+.btInit pre {
+    white-space:pre-wrap;
+    word-break:break-all;
+}
+
+.btInit [data-role=shortcut] {
+    position:absolute;
+}
+
+.btInit .sidebox {
+    margin:5px 5px 0;
+    width:240px;
+}
+
+.btInit .sidebox li {
+    word-break:break-all;
+}
+
+.btInit a {
+    display:inline-block;
+    font-size:20px;
+    padding:10px;
+    margin:2px;
+    background:#ffd;
+    border-radius:10px;
+}
+
+.btInit .btn.menu {
+    cursor:pointer;
+    height:48px;
+    background:#fdf url(shortcut.png) no-repeat 100% 0;
+}
+
+.illustration {
+    text-align:center;
+}
+
+.illustration dd {
+    font-weight:900;
+    margin:0 0 40px;
+}

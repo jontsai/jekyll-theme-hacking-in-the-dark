@@ -1,0 +1,166 @@
+{
+    "name": "Primrose Test Suite",
+    "passed": 45,
+    "failed": 0,
+    "errors": 0,
+    "ignored": 0,
+    "total": 45,
+    "duration": 654,
+    "type": "report",
+    "API": {
+        "name": "API",
+        "passed": 1,
+        "failed": 0,
+        "errors": 0,
+        "ignored": 0,
+        "total": 1,
+        "duration": 14,
+        "type": "testcase",
+        "spyOn: it creates a spy based on the type": {
+            "result": "pass",
+            "message": "Test passed",
+            "type": "test",
+            "name": "spyOn: it creates a spy based on the type",
+            "duration": 1
+        }
+    },
+    "Suite": {
+        "name": "Suite",
+        "passed": 2,
+        "failed": 0,
+        "errors": 0,
+        "ignored": 0,
+        "total": 2,
+        "duration": 35,
+        "type": "testcase",
+        "add: it should add children": {
+            "result": "pass",
+            "message": "Test passed",
+            "type": "test",
+            "name": "add: it should add children",
+            "duration": 2
+        },
+        "run: it should run all children": {
+            "result": "pass",
+            "message": "Test passed",
+            "type": "test",
+            "name": "run: it should run all children",
+            "duration": 3
+        }
+    },
+    "Spec": {
+        "name": "Spec",
+        "passed": 5,
+        "failed": 0,
+        "errors": 0,
+        "ignored": 0,
+        "total": 5,
+        "duration": 66,
+        "type": "testcase",
+        "add: it add an expectation": {
+            "result": "pass",
+            "message": "Test passed",
+            "type": "test",
+            "name": "add: it add an expectation",
+            "duration": 2
+        },
+        "expect: it created an expectation for add": {
+            "result": "pass",
+            "message": "Test passed",
+            "type": "test",
+            "name": "expect: it created an expectation for add",
+            "duration": 1
+        },
+        "run: it runs beforeList": {
+            "result": "pass",
+            "message": "Test passed",
+            "type": "test",
+            "name": "run: it runs beforeList",
+            "duration": 1
+        },
+        "run: it should run the block": {
+            "result": "pass",
+            "message": "Test passed",
+            "type": "test",
+            "name": "run: it should run the block",
+            "duration": 1
+        },
+        "run: it runs expectations": {
+            "result": "pass",
+            "message": "Test passed",
+            "type": "test",
+            "name": "run: it runs expectations",
+            "duration": 1
+        }
+    },
+    "Expectation": {
+        "name": "Expectation",
+        "passed": 4,
+        "failed": 0,
+        "errors": 0,
+        "ignored": 0,
+        "total": 4,
+        "duration": 54,
+        "type": "testcase",
+        "run: it runs validate": {
+            "result": "pass",
+            "message": "Test passed",
+            "type": "test",
+            "name": "run: it runs validate",
+            "duration": 1
+        },
+        "not: it negates the expectation": {
+            "result": "pass",
+            "message": "Test passed",
+            "type": "test",
+            "name": "not: it negates the expectation",
+            "duration": 0
+        },
+        "validate:it calls the validator": {
+            "result": "pass",
+            "message": "Test passed",
+            "type": "test",
+            "name": "validate:it calls the validator",
+            "duration": 1
+        },
+        "validate: it sets the result": {
+            "result": "pass",
+            "message": "Test passed",
+            "type": "test",
+            "name": "validate: it sets the result",
+            "duration": 1
+        }
+    },
+    "MethodSpy": {
+        "name": "MethodSpy",
+        "passed": 3,
+        "failed": 0,
+        "errors": 0,
+        "ignored": 0,
+        "total": 3,
+        "duration": 46,
+        "type": "testcase",
+        "it displaces method": {
+            "result": "pass",
+            "message": "Test passed",
+            "type": "test",
+            "name": "it displaces method",
+            "duration": 0
+        },
+        "it records the number of runs": {
+            "result": "pass",
+            "message": "Test passed",
+            "type": "test",
+            "name": "it records the number of runs",
+            "duration": 1
+        },
+        "it runs the original function": {
+            "result": "pass",
+            "message": "Test passed",
+            "type": "test",
+            "name": "it runs the original function",
+            "duration": 0
+        }
+    },
+    "timestamp": "Wed 16 Jan 2013 03:06:49 PM CST"
+}

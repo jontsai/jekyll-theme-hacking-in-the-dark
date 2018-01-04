@@ -1,0 +1,31 @@
+{
+    "name"       : "page",
+    "displayName": "Page Widget",
+    "description": "is extended from Widget and PushPop, it will fill the browser's width and height automatically. In a html, only one page widget can be placed.",
+    "className": "Page",
+    "parents": ["pushpop"],
+    "dataRole": "page",
+    "galleryTag": "gallery-2012.09.12-20-02",
+
+    "hideShortcut": true,
+    "hideOverlay": true,
+
+    "data-attrs": [
+        {
+            "name": "native-scroll",
+            "description": "Use native browser page scroll. ",
+            "referAttr": "nativeScroll",
+            "default": "true (on touch devices)"
+        }
+    ],
+
+    "examples": [
+        {
+            "name"       : "example-basic-page",
+            "displayName": "Basic Page",
+            "description": "Demonstrates basic usage of the Page Widget.",
+            "onlyInit": true,
+            "layout": "example"
+        }
+    ]
+}

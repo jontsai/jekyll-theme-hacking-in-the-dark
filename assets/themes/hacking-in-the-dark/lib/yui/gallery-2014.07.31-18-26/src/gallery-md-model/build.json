@@ -1,0 +1,11 @@
+{
+    "name": "gallery-md-model",
+    "builds": {
+        "gallery-md-model": {
+            "jsfiles": [
+                "gallery-md-model.js"
+            ],
+            "meta": {}
+        }
+    }
+}

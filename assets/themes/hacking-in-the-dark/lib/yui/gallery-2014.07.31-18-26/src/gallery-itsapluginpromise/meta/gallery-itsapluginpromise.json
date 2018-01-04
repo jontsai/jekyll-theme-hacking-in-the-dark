@@ -1,0 +1,14 @@
+{
+    "gallery-itsapluginpromise": {
+        "requires": [
+            "yui-base",
+            "base-base",
+            "base-build",
+            "pluginhost-base",
+            "plugin",
+            "event-delegate",
+            "yui-later",
+            "promise"
+        ]
+    }
+}

@@ -1,0 +1,91 @@
+[35myogi[0m [37m[[0m[37minfo[0m[37m][0m  using yogi@0.1.11 on node@0.10.21
+[35myogi[0m [37m[[0m[37minfo[0m[37m][0m  using module: gallery-itsatoolbar
+[35myogi[0m [37m[[0m[37minfo[0m[37m][0m  running with shifter
+shifter [info] racing to find the closest .shifter.json file
+shifter [info] revving up
+shifter [info] looking for build.json file
+shifter [info] found build.json file, shifting
+shifter [info] putting the hammer down, let's build this thing!
+shifter [info] munging in loader meta data into build.json
+shifter [info] putting the hammer down
+shifter [info] shifting into gear for gallery-itsatoolbar
+   #1: Expected '===' and instead saw '=='.
+       isEmailLink = (node.get('href').match('^mailto:', 'i')=='mailto:'); // line 1568, pos 79
+   #2: Expected '!==' and instead saw '!='.
+       isHyperLink = href.match('^mailto:', 'i')!='mailto:'; // line 1593, pos 70
+   #3: Expected '!==' and instead saw '!='.
+       isHyperLink = href.match('^mailto:', 'i')!='mailto:'; // line 1690, pos 70
+shifter [queu] file has changed, continuing build
+shifter [queu] writing RAW file
+shifter [queu] compressing gallery-itsatoolbar/gallery-itsatoolbar.js with UglifyJS
+shifter [queu] writing -min file
+shifter [info] shifting for coverage
+shifter [info] shifting skin for gallery-itsatoolbar
+shifter [info] found a subskin, shifting for gallery-itsatoolbar
+shifter [queu] coverage file read, starting coverage for: gallery-itsatoolbar/gallery-itsatoolbar.js
+shifter [info] istanbul providing coverage
+shifter [queu] instrumenting with istanbul
+shifter [queu] writing coverage file to gallery-itsatoolbar/gallery-itsatoolbar-coverage.js
+shifter [queu] copying assets to skin for sam
+   #1: [warning] Don't use IDs in selectors.
+       #itsatoolbar-ref { // line 3, pos 1
+   #2: [warning] Don't use IDs in selectors.
+       #itsatoolbar-tmpref { // line 6, pos 1
+   #3: [warning] Don't use IDs in selectors.
+       #itsatoolbar-tmpempty { // line 9, pos 1
+   #4: [warning] height can't be used with display: inline.
+       height: 19px; // line 22, pos 5
+   #5: [warning] width can't be used with display: inline.
+       width: 20px; // line 24, pos 5
+   #6: [warning] Expected end of value but found '\9'.
+       background-image: url('itsa-buttonicons-2013-01-07.png') \9; // line 28, pos 5
+   #7: [warning] Values of 0 shouldn't have units specified.
+       padding: 4px 0px; // line 32, pos 18
+   #8: [warning] Values of 0 shouldn't have units specified.
+       padding: 4px 0px 3px; // line 36, pos 18
+   #9: [warning] Values of 0 shouldn't have units specified.
+       margin: 0px 2px; // line 63, pos 13
+   #10: [warning] The properties padding-top, padding-bottom, padding-left, padding-right can be replaced by padding.
+       .itsatoolbar .yui3-button { // line 70, pos 1
+   #11: [warning] Values of 0 shouldn't have units specified.
+       margin:0px; // line 73, pos 12
+   #12: [warning] Using height with padding-top can sometimes make elements larger than you expect.
+       padding-top:3px; // line 77, pos 5
+   #13: [warning] Using height with padding-bottom can sometimes make elements larger than you expect.
+       padding-bottom:4px; // line 78, pos 5
+   #14: [warning] Using height with padding can sometimes make elements larger than you expect.
+       padding: 3px; // line 81, pos 5
+   #15: [warning] Using height with padding can sometimes make elements larger than you expect.
+       padding: 5px; // line 86, pos 5
+   #16: [warning] Values of 0 shouldn't have units specified.
+       padding: 4px 3px 0px; // line 116, pos 22
+   #17: [warning] Values of 0 shouldn't have units specified.
+       padding: 4px 0px 0px; // line 137, pos 18
+   #18: [warning] Values of 0 shouldn't have units specified.
+       padding: 4px 0px 0px; // line 137, pos 22
+   #19: [warning] width can't be used with display: inline.
+       width: 100%; // line 148, pos 5
+   #20: [warning] Values of 0 shouldn't have units specified.
+       padding: 4px 4px 4px 0px; // line 149, pos 26
+   #21: [warning] Using width with padding can sometimes make elements larger than you expect.
+       padding: 4px 4px 4px 0px; // line 149, pos 5
+   #22: [warning] Values of 0 shouldn't have units specified.
+       background-position: 1px 0px; // line 203, pos 30
+shifter [queu] writing skin file with core wrapper
+shifter [info] done racing, the gears are toast
+shifter [info] finished in 0.965 seconds, pretty fast huh?
+[35myogi[0m [37m[[0m[37minfo[0m[37m][0m  build complete
+[35myogi[0m [37m[[0m[37minfo[0m[37m][0m  testing module now
+[35myogi[0m [37m[[0m[37minfo[0m[37m][0m  prepping grover tests
+[35myogi[0m [37m[[0m[37minfo[0m[37m][0m  adding tests route
+[35myogi[0m [37m[[0m[37minfo[0m[37m][0m  launching xdr server on port 5001
+[35myogi[0m [37m[[0m[37minfo[0m[37m][0m  listening on: http://127.0.0.1:5000
+[35myogi[0m [37m[[0m[37minfo[0m[37m][0m  turning on coverage support in grover
+Starting Grover on 1 files with PhantomJS@1.9.1
+  Running 15 concurrent tests at a time.
+  Using a 120 second timeout per test.
+✖ [gallery-itsatoolbar]: Passed: 0 Failed: 1 Total: 1 (ignored 0) (0.005 seconds)
+    test is empty
+       No Tests Provided For This Module
+Writing files in JSON format to: /src/gallery-itsatoolbar/logs/tests.json
+[35myogi[0m [37m[[0m[31mbail[0m[37m][0m grover returned a failure

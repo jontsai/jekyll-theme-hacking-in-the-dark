@@ -1,0 +1,64 @@
+{
+  "gallery-rocket": {
+    "requires": [
+      "app",
+      "gallery-rocket-controller",
+      "gallery-rocket-model",
+      "gallery-rocket-view",
+      "gallery-rocket-layout",
+      "gallery-rocket-list-view",
+      "gallery-rocket-child-view-container",
+      "gallery-rocket-region",
+      "gallery-rocket-region-manager",
+      "gallery-rocket-event-broker",
+      "gallery-rocket-util"
+    ]
+  },
+  "gallery-rocket-controller": {
+    "requires": ["gallery-rocket-event-broker"]
+  },
+  "gallery-rocket-model": {
+    "requires": [
+      "model",
+      "gallery-rocket-event-broker"
+    ]
+  },
+  "gallery-rocket-view": {
+    "requires": [
+      "view",
+      "event",
+      "handlebars",
+      "gallery-rocket-util",
+      "gallery-rocket-event-broker"
+    ]
+  },
+  "gallery-rocket-layout": {
+    "requires": [
+      "gallery-rocket-view",
+      "gallery-rocket-region-manager"
+    ]
+  },
+  "gallery-rocket-list-view": {
+    "requires": [
+      "gallery-rocket-view",
+      "handlebars",
+      "model-list",
+      "gallery-rocket-child-view-container"
+    ]
+  },
+  "gallery-rocket-child-view-container": {
+    "requires": ["yui-base"]
+  },
+  "gallery-rocket-region": {
+    "requires": ["gallery-rocket-view"]
+  },
+  "gallery-rocket-region-manager": {
+    "requires": ["gallery-rocket-region"]
+  },
+  "gallery-rocket-event-broker": {
+    "requires": ["event", "event-key"]
+  },
+  "gallery-rocket-util": {
+    "requires": ["yui-base"]
+  }
+}

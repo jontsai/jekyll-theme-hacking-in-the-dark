@@ -1,0 +1,19 @@
+{
+    "name"       : "gallery-introtour-ui",
+    "displayName": "Gallery: gallery-introtour-ui",
+    "description": "Integrate step by step feature walkthrough on your web page.",
+    "author"     : [ "nbprithv" ],
+    "use"        : [ "gallery-introtour-ui" ],
+
+    "tags": [ "gallery","feature","walkthrough" ],
+
+    "examples": [
+		{   
+            "name": "introtour-ui-demo",
+            "displayName": "Demo",
+            "description": "Demo of feature walkthrough.",
+            "modules": ["introutour-ui"],
+            "tags": ["introtour", "demo"]
+        }
+	]
+}

@@ -1,0 +1,10 @@
+{
+    "name": "gallery-itsaselectlist",
+    "builds": {
+        "gallery-itsaselectlist": {
+            "jsfiles": [
+                "js/gallery-itsaselectlist.js"
+            ]
+        }
+    }
+}

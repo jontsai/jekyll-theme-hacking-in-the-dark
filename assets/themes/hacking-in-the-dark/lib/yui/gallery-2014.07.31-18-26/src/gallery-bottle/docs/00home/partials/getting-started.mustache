@@ -1,0 +1,39 @@
+<h2>Getting Started</h2>
+
+<p>
+To include the source files for `{{projectName}}` and its dependencies, first load the YUI seed file if you haven't already loaded it. Then, the bottle javascript configuration file.
+</p> 
+
+```
+{{>bottle-scripts}}
+```
+{{#unless examples}}
+<p>The YUI gallery CDN version of `{{projectName}}` is stable. If you want to try new features, you may need to use nighty versions, check <a href="versions.html">versions document</a>.
+</p>{{/unless}}
+
+<p>
+Next, create a new YUI instance for your application and populate it with the modules you need by specifying them as arguments to the `YUI().use()` method. YUI will automatically load any dependencies required by the modules you specify.
+</p>
+
+```
+<script>
+// Create a new YUI instance and populate it with the required modules.
+YUI({{{yuiParams}}}).use({{{useParams}}}, function (Y) {
+    Y.Bottle.init(true); // true means hide browser url bar{{#if displayName}}
+    // {{displayName}} is available and ready for use. 
+    // Add implementation code here.{{else}}
+    // Bottle framework is initialized, enjoy it! Or, add more codes.{{/if}}
+});
+</script>
+``` 
+
+{{#unless noAttrs}}
+<p>
+Then, use correct <a href="{{#if displayName}}..{{else}}.{{/if}}/data-attribute.html">Data Roles and Data Attributes</a> in your HTML to enable `{{projectName}}`.
+</p>
+{{/unless}}
+
+<p>You may add default css inside head tags, this can help performance. If you don't, `{{projectName}}` still works well.</p>
+```
+{{>yui-css}}
+```

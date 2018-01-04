@@ -1,0 +1,8 @@
+{
+    "gallery-paginator-view": {
+         "requires":[
+             "model", "view", "substitute"
+         ],
+         "skinnable": "true"
+    }
+}

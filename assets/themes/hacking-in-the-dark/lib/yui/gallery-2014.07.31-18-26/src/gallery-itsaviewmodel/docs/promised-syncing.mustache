@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.2.1/pure-min.css">
+
+<style type="text/css">
+{{>promised-syncing-css}}
+</style>
+
+<div class="intro">
+    <p>
+        {{description}} Submission is simulated by timeout. Look at the commented code to find out how the setup reaally should be..
+    </p>
+</div>
+
+{{>promised-syncing-html}}
+
+<h2>Code</h2>
+```
+{{>promised-syncing-js}}
+```
+
+<h2>Complete Example Source</h2>
+```
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.2.1/pure-min.css">
+<style type="text/css">
+{{>promised-syncing-css}}
+</style>
+
+<body>
+
+{{>promised-syncing-html}}
+
+<script>
+{{>promised-syncing-js}}
+</script>
+
+</body>
+```
+
+<script>
+{{>init-loaderconfig-js}}
+{{>loaderconfig-js}}
+{{>promised-syncing-js}}
+</script>

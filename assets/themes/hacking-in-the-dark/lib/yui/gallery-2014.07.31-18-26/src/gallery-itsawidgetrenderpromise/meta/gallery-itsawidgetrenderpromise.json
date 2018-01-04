@@ -1,0 +1,10 @@
+{
+    "gallery-itsawidgetrenderpromise": {
+        "requires": [
+            "yui-base",
+            "yui-later",
+            "widget-base",
+            "promise"
+        ]
+    }
+}

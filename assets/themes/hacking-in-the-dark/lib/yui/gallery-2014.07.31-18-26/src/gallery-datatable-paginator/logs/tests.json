@@ -1,0 +1,326 @@
+{
+    "name": "gallery-datatable-paginator",
+    "passed": 105,
+    "failed": 0,
+    "errors": 0,
+    "ignored": 0,
+    "total": 105,
+    "duration": 9564,
+    "type": "report",
+    "Gallery DataTable-Paginator : class extension basics": {
+        "name": "Gallery DataTable-Paginator : class extension basics",
+        "passed": 4,
+        "failed": 0,
+        "errors": 0,
+        "ignored": 0,
+        "total": 4,
+        "duration": 233,
+        "type": "testcase",
+        "should be a class": {
+            "result": "pass",
+            "message": "Test passed",
+            "type": "test",
+            "name": "should be a class",
+            "duration": 55
+        },
+        "should instantiate as a DT": {
+            "result": "pass",
+            "message": "Test passed",
+            "type": "test",
+            "name": "should instantiate as a DT",
+            "duration": 46
+        },
+        "listeners are set": {
+            "result": "pass",
+            "message": "Test passed",
+            "type": "test",
+            "name": "listeners are set",
+            "duration": 57
+        },
+        "check ATTR defaults values": {
+            "result": "pass",
+            "message": "Test passed",
+            "type": "test",
+            "name": "check ATTR defaults values",
+            "duration": 43
+        }
+    },
+    "Gallery DataTable-Paginator :  client-side (w/local data)": {
+        "name": "Gallery DataTable-Paginator :  client-side (w/local data)",
+        "passed": 4,
+        "failed": 0,
+        "errors": 0,
+        "ignored": 0,
+        "total": 4,
+        "duration": 287,
+        "type": "testcase",
+        "check DT pagination setup": {
+            "result": "pass",
+            "message": "Test passed",
+            "type": "test",
+            "name": "check DT pagination setup",
+            "duration": 62
+        },
+        "check page 1 stats": {
+            "result": "pass",
+            "message": "Test passed",
+            "type": "test",
+            "name": "check page 1 stats",
+            "duration": 58
+        },
+        "check page 4 stats": {
+            "result": "pass",
+            "message": "Test passed",
+            "type": "test",
+            "name": "check page 4 stats",
+            "duration": 65
+        },
+        "check destroying the paginator": {
+            "result": "pass",
+            "message": "Test passed",
+            "type": "test",
+            "name": "check destroying the paginator",
+            "duration": 51
+        }
+    },
+    "Gallery DataTable-Paginator :  check reset of data": {
+        "name": "Gallery DataTable-Paginator :  check reset of data",
+        "passed": 3,
+        "failed": 0,
+        "errors": 0,
+        "ignored": 0,
+        "total": 3,
+        "duration": 234,
+        "type": "testcase",
+        "check DT pagination setup": {
+            "result": "pass",
+            "message": "Test passed",
+            "type": "test",
+            "name": "check DT pagination setup",
+            "duration": 62
+        },
+        "reset local data to []": {
+            "result": "pass",
+            "message": "Test passed",
+            "type": "test",
+            "name": "reset local data to []",
+            "duration": 60
+        },
+        "repopulate with original data, check page 2": {
+            "result": "pass",
+            "message": "Test passed",
+            "type": "test",
+            "name": "repopulate with original data, check page 2",
+            "duration": 72
+        }
+    },
+    "Gallery DataTable-Paginator : local data client-side pag sorting": {
+        "name": "Gallery DataTable-Paginator : local data client-side pag sorting",
+        "passed": 6,
+        "failed": 0,
+        "errors": 0,
+        "ignored": 0,
+        "total": 6,
+        "duration": 491,
+        "type": "testcase",
+        "check DT pagination setup": {
+            "result": "pass",
+            "message": "Test passed",
+            "type": "test",
+            "name": "check DT pagination setup",
+            "duration": 59
+        },
+        "check page 1 stats": {
+            "result": "pass",
+            "message": "Test passed",
+            "type": "test",
+            "name": "check page 1 stats",
+            "duration": 60
+        },
+        "check page 4 stats": {
+            "result": "pass",
+            "message": "Test passed",
+            "type": "test",
+            "name": "check page 4 stats",
+            "duration": 66
+        },
+        "check float sorting (dflt column) - Page 1": {
+            "result": "pass",
+            "message": "Test passed",
+            "type": "test",
+            "name": "check float sorting (dflt column) - Page 1",
+            "duration": 62
+        },
+        "check text sorting (dtxt column) - Page 3": {
+            "result": "pass",
+            "message": "Test passed",
+            "type": "test",
+            "name": "check text sorting (dtxt column) - Page 3",
+            "duration": 80
+        },
+        "check date sorting (ddate column) - Page 2": {
+            "result": "pass",
+            "message": "Test passed",
+            "type": "test",
+            "name": "check date sorting (ddate column) - Page 2",
+            "duration": 94
+        }
+    },
+    "Gallery DataTable-Paginator : remote (server-side) pagination via Function DS incl sorting": {
+        "name": "Gallery DataTable-Paginator : remote (server-side) pagination via Function DS incl sorting",
+        "passed": 7,
+        "failed": 0,
+        "errors": 0,
+        "ignored": 0,
+        "total": 7,
+        "duration": 839,
+        "type": "testcase",
+        "check DT pagination setup": {
+            "result": "pass",
+            "message": "Test passed",
+            "type": "test",
+            "name": "check DT pagination setup",
+            "duration": 30
+        },
+        "check page 1 stats": {
+            "result": "pass",
+            "message": "Test passed",
+            "type": "test",
+            "name": "check page 1 stats",
+            "duration": 23
+        },
+        "check page 4 stats": {
+            "result": "pass",
+            "message": "Test passed",
+            "type": "test",
+            "name": "check page 4 stats",
+            "duration": 52
+        },
+        "check float sorting (dflt column) - Page 1": {
+            "result": "pass",
+            "message": "Test passed",
+            "type": "test",
+            "name": "check float sorting (dflt column) - Page 1",
+            "duration": 25
+        },
+        "check text sorting (dtxt column) - Page 3": {
+            "result": "pass",
+            "message": "Test passed",
+            "type": "test",
+            "name": "check text sorting (dtxt column) - Page 3",
+            "duration": 50
+        },
+        "check date sorting (ddate column) - Page 2": {
+            "result": "pass",
+            "message": "Test passed",
+            "type": "test",
+            "name": "check date sorting (ddate column) - Page 2",
+            "duration": 77
+        },
+        "check empty response, paginator disable": {
+            "result": "pass",
+            "message": "Test passed",
+            "type": "test",
+            "name": "check empty response, paginator disable",
+            "duration": 502
+        }
+    },
+    "Gallery DataTable-Paginator : remote (server-side) pag via Function DS with serverPaginationMap": {
+        "name": "Gallery DataTable-Paginator : remote (server-side) pag via Function DS with serverPaginationMap",
+        "passed": 5,
+        "failed": 0,
+        "errors": 0,
+        "ignored": 0,
+        "total": 5,
+        "duration": 717,
+        "type": "testcase",
+        "check DT pagination setup": {
+            "result": "pass",
+            "message": "Test passed",
+            "type": "test",
+            "name": "check DT pagination setup",
+            "duration": 26
+        },
+        "check page 1 stats": {
+            "result": "pass",
+            "message": "Test passed",
+            "type": "test",
+            "name": "check page 1 stats",
+            "duration": 25
+        },
+        "check page 4 stats": {
+            "result": "pass",
+            "message": "Test passed",
+            "type": "test",
+            "name": "check page 4 stats",
+            "duration": 54
+        },
+        "check float sorting (dflt column) - Page 1": {
+            "result": "pass",
+            "message": "Test passed",
+            "type": "test",
+            "name": "check float sorting (dflt column) - Page 1",
+            "duration": 36
+        },
+        "check empty response, paginator disable": {
+            "result": "pass",
+            "message": "Test passed",
+            "type": "test",
+            "name": "check empty response, paginator disable",
+            "duration": 515
+        }
+    },
+    "Gallery DataTable-Paginator : remote (server-side) pagination via ModelList.sync": {
+        "name": "Gallery DataTable-Paginator : remote (server-side) pagination via ModelList.sync",
+        "passed": 6,
+        "failed": 0,
+        "errors": 0,
+        "ignored": 0,
+        "total": 6,
+        "duration": 383,
+        "type": "testcase",
+        "check DT pagination setup": {
+            "result": "pass",
+            "message": "Test passed",
+            "type": "test",
+            "name": "check DT pagination setup",
+            "duration": 28
+        },
+        "check page 1 stats": {
+            "result": "pass",
+            "message": "Test passed",
+            "type": "test",
+            "name": "check page 1 stats",
+            "duration": 25
+        },
+        "check page 4 stats": {
+            "result": "pass",
+            "message": "Test passed",
+            "type": "test",
+            "name": "check page 4 stats",
+            "duration": 62
+        },
+        "check float sorting (dflt column) - Page 1": {
+            "result": "pass",
+            "message": "Test passed",
+            "type": "test",
+            "name": "check float sorting (dflt column) - Page 1",
+            "duration": 27
+        },
+        "check text sorting (dtxt column) - Page 3": {
+            "result": "pass",
+            "message": "Test passed",
+            "type": "test",
+            "name": "check text sorting (dtxt column) - Page 3",
+            "duration": 86
+        },
+        "check date sorting (ddate column) - Page 2": {
+            "result": "pass",
+            "message": "Test passed",
+            "type": "test",
+            "name": "check date sorting (ddate column) - Page 2",
+            "duration": 85
+        }
+    },
+    "timestamp": "Wed 16 Jan 2013 03:06:53 PM CST"
+}

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<script type="text/javascript" src="http://yui.yahooapis.com/3.7.1/build/yui/yui-min.js"></script>
+	</head>
+	<body class="yui3-skin-sam">
+		<a href="out/index.html">API docs</a>
+		<h1>A Tree:</h1>
+		<div id="container"></div>
+        <div id="plainDynLoader"></div>
+		<h1>A dynamic tree with multiple node types:</h1>
+		<p>The nodes of this tree are read from YQL, any replies rely on that service.
+            The nodes have references to albums and artists so that by clicking on them
+            or pressing enter while they have the focus, it will navigate away.</p>
+		<div id="dynTree"></div>
+        <h1>A tree with checkboxes for selection</h1>
+        <p>This tree is built dynamically with randomized labels just to show selection, supposedly of files/folders.
+         The Save button will list in the container below the JSON for those files/folders marked as selected.</p>
+        <p>The container for this tree has <code>class="yui3-fw-treeview-checkbox"</code> set because node
+        selection is always active in TreeView, it just needs to be made visible through CSS styles, which
+        the default stylesheet contains and this className activates.</p>
+        <div id="selContainer" class="yui3-fw-treeview-checkbox"></div>
+		<button id="save">Save</button>
+		<div id="output"></div>
+		<script>
+			YUI({
+//                gallery: 'gallery-2012.12.05-17-54'
+//                filter:'raw',
+//                combine:false,
+				groups: {
+					gallery: {
+						base:'../../../build/',
+//						base:'http://satyam.github.com/yui3-gallery/build/',
+						modules: {
+							'gallery-flyweight-tree': {
+								path:'gallery-flyweight-tree/gallery-flyweight-tree.js',
+								requires:["widget","base-build"]
+							},
+							'gallery-fwt-treeview': {
+								path: 'gallery-fwt-treeview/gallery-fwt-treeview.js',
+								requires: ["gallery-flyweight-tree","widget","base-build"],
+								skinnable: true
+							}
+						}
+					}
+				}
+			}).use('gallery-fwt-treeview','yql', 'json', function (Y) {
+				'use strict';
+				/*jslint white:true*/
+				var Lang = Y.Lang,
+					tv = new Y.FWTreeView({tree: [
+					{
+						label:'label 0',
+						children: [
+							{
+								label: 'label 0-0',
+								expanded: false,
+								children: [
+									{
+										label: 'label 0-0-0'
+									},
+									{
+										label: 'label 0-0-1',
+										children: [
+											{label: 'label 0-0-1'}
+										]
+									}
+								]
+							},
+							{
+								label: 'label 0-1'
+							}
+						]
+					},
+					{
+						label: 'label 1'
+					}
+
+				]});
+				tv.render('#container');
+
+				(new Y.FWTreeView({
+                    tree: [
+                        'label 0',
+                        'label 1',
+                        'label 2'
+                    ],
+                    dynamicLoader: function (node, callback) {
+
+                        var i,
+                            label = node.get('label'),
+                            branch = [];
+                        for (i = 0; i < 3; i+=1) {
+                            branch[i] = label + '-' + i;
+                        }
+                        callback(branch);
+                    }
+                })).render('#plainDynLoader');
+
+/*
+                var ArtistNode = Y.Base.create(
+					'artist-node',
+					Y.FWTreeNode,
+					[],
+					{
+
+					},{
+                        INNER_TEMPLATE: '<div tabIndex="{tabIndex}" class="{CNAME_CONTENT}"><div class="{CNAME_TOGGLE}"></div>' +
+                                        '<div class="{CNAME_LABEL} role="link">{label}</div> <div class="www-go"></div></div>',
+						ATTRS: {
+							url: {},
+							artistId: {}
+						}
+
+					}
+				);
+				var AlbumNode = Y.Base.create(
+					'album-node',
+					Y.FWTreeNode,
+					[],
+					{
+
+					},{
+                        INNER_TEMPLATE: '<div tabIndex="{tabIndex}" class="{CNAME_CONTENT}"><div class="{CNAME_TOGGLE}"></div>' +
+                                        '<div class="{CNAME_LABEL}" role="link">{label} ({publisher})</div><div class="www-go"></div></div>',
+						ATTRS: {
+							url: {},
+							albumId: {},
+							publisher: {}
+						}
+
+					}
+				);
+				var TrackNode = Y.Base.create(
+					'track-node',
+					Y.FWTreeNode,
+					[],
+					{
+
+					},{
+                        INNER_TEMPLATE: '<div tabIndex="{tabIndex}" class="{CNAME_CONTENT}"><div class="{CNAME_TOGGLE}"></div>' +
+                                        '<div class="{CNAME_LABEL}" role="link">[disc:{discNumber} - track:{trackNumber} - duration: {duration}]: {label}</div></div>',
+						ATTRS: {
+							discNumber: {},
+							trackNumber: {},
+							duration: {}
+						}
+
+					}
+				);
+
+				Y.YQL('select id, name, url from music.artist.search where keyword="Madonna" | sort(field="trackCount", descending="true")', function(response) {
+					if (!response.query.count) {
+						Y.one('#dynTree').setContent('YQL query for Madonna returned no records or failed');
+						return;
+					}
+					var cfg = [],
+						results = response.query.results.Artist || [];
+
+					if (!Lang.isArray(results)) {
+						results = [results];
+					}
+					Y.Array.each(results, function (entry) {
+						cfg.push( {
+							label: entry.name,
+							artistId: entry.id,
+							url: entry.url,
+							type:ArtistNode
+
+						});
+					});
+					var artistTree = new Y.FWTreeView({
+						dynamicLoader: function (node, callback) {
+							if (node instanceof ArtistNode) {
+								Y.YQL(Lang.sub('select id, title, releaseYear, label, url from music.release.artist where id="{artistId}"   | sort(field="releaseYear", descending="true")', node.getAttrs()), function (response) {
+									if (!response.query.count) {
+										alert(Lang.sub('YQL query for albums by {label} failed or returned no results', node.getAttrs()));
+										callback();
+										return;
+									}
+									var cfg = [],
+										results = response.query.results.Release || [];
+
+									if (!Lang.isArray(results)) {
+										results = [results];
+									};
+									Y.Array.each(results, function (entry) {
+										cfg.push( {
+											label: entry.title || ' ',
+											publisher: entry.label || 'unknown publisher',
+											albumId: entry.id,
+											url: entry.url || '#',
+											type:AlbumNode
+
+										});
+									});
+									callback(cfg);
+									return;
+								});
+
+							}
+							if (node instanceof AlbumNode)  {
+								Y.YQL(Lang.sub('select Track.discNumber, Track.trackNumber, Track.duration, Track.title, Track.popularity from music.release.id where ids="{albumId}" and response="tracks"', node.getAttrs()), function (response) {
+
+									if (!response.query.count) {
+										alert(Lang.sub('YQL query for album "{label}" failed or returned no results', node.getAttrs()));
+										callback();
+										return;
+									}
+									var cfg = [],
+										results = response.query.results.Release || [];
+
+									if (!Lang.isArray(results)) {
+										results = [results];
+									};
+									Y.Array.each(results, function (entry) {
+										entry = entry.Track;
+									// {"Track":{"discNumber":"1","duration":"0","popularity":"3","title":"Karaoke: Crazy For You","trackNumber":"1"}}
+										cfg.push( {
+											label: entry.title || '- no title -',
+											discNumber: entry.discNumber || 1,
+											trackNumber: entry.trackNumber || '-',
+											duration: entry.duration || '--:--',
+											type:TrackNode,
+											isLeaf:true
+
+										});
+									});
+									callback(cfg);
+									return;
+								});
+
+							}
+						},
+						tree: cfg
+					});
+                    artistTree.render('#dynTree');
+                    artistTree.after(['click', 'enterkey'], function (ev) {
+                        if (ev.type.split(':')[1] == 'enterkey' || ev.domEvent.target.hasClass('artistNavigate')) {
+
+                        }
+                        var url = ev.node.get('url');
+                        console.log('url', url);
+                        if (url) {
+                            window.location = url;
+                        }
+                    });
+			    });*/
+				var sampleString = ("In computer programming, flyweight is a software design pattern. " +
+					"A flyweight is an object that minimizes memory use by sharing as much data as possible with other similar objects; " +
+					"it is a way to use objects in large numbers when a simple repeated representation would use an unacceptable amount of memory." +
+					" Often some parts of the object state can be shared, and it is common practice to hold them in external data structures and pass " +
+					"them to the flyweight objects temporarily when they are used." +
+					"A classic example usage of the flyweight pattern is the data structures for graphical representation of characters in a word processor. " +
+					"It might be desirable to have, for each character in a document, a glyph object containing its font outline, font metrics, " +
+					"and other formatting data, but this would amount to hundreds or thousands of bytes for each character. " +
+					"Instead, for every character there might be a reference to a flyweight glyph object shared by " +
+					"every instance of the same character in the document; only the position of each character " +
+					"(in the document and/or the page) would need to be stored internally.Another example is string interning." +
+					"In other contexts the idea of sharing identical data structures is called hash consing.").replace(/\W/g,'');
+
+
+				var FileNode = Y.Base.create(
+					'file-node',
+					Y.FWTreeNode,
+					[],
+					{
+					},
+					{
+						ATTRS: {
+							path: {}
+						}
+
+					}
+				);
+
+
+				var tv = new Y.FWTreeView({
+					tree: [
+						{
+							label:'nice files',
+                            path: 'niceFiles',
+							children: [
+								{
+									label: 'really nice',
+									path:'reallyNiceFiles'
+								},
+								{
+									label: 'so-so files',
+									path:'mediocreFiles'
+								}
+							]
+						},
+						{
+							label: 'ugly files',
+							path: 'nastyFiles'
+						}
+
+					],
+					dynamicLoader: function (node, callback) {
+						var returnFakeJSON = function(path) {
+							var i, l, f, reply = [];
+							for (i = 0,l = Math.random() * 5; i < l; i+=1) {
+								f = sampleString.substr(Math.random() * sampleString.length, Math.ceil(Math.random() * 10));
+								reply.push({
+									label:f,
+									path:path + '/' + f,
+									isLeaf:Math.random() > .3,
+                                    selectionEnabled: Math.random() > .3
+								})
+							}
+							return reply;
+						}
+
+						var reply = returnFakeJSON(node.get('path'));
+
+						callback(reply);
+						return;
+					},
+					defaultType: FileNode,
+					toggleOnLabelClick:true
+                });
+				tv.render('#selContainer');
+				Y.one('#save').on('click', function() {
+					var output = [];
+					tv.forSomeNodes(function (node) {
+						if (node.get('selected')=== Y.FWTreeNode.FULLY_SELECTED) {
+							output.push({
+								path:node.get('path'),
+								isFolder: !node.get('isLeaf')
+							});
+						}
+					});
+
+					Y.one('#output').setContent(Y.JSON.stringify(output));
+
+				});
+
+			});
+		</script>
+	</body>
+</html>

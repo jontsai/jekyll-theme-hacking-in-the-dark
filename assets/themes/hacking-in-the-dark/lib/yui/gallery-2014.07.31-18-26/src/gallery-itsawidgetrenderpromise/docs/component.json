@@ -1,0 +1,48 @@
+{
+    "name"       : "gallery-itsawidgetrenderpromise",
+    "displayName": "Gallery: gallery-itsawidgetrenderpromise",
+    "description": "This module adds some renderPromises to the Y.Widget class.",
+    "author"     : [ "itsasbreuk" ],
+    "use"        : [ "gallery-itsawidgetrenderpromise" ],
+
+    "tags": [ "gallery" ],
+
+    "examples": [
+        {
+            "name"       : "using-renderpromise",
+            "displayName": "Waiting for multiple widgets to be rendered",
+            "description": "This example shows how to use renderPromise() with Y.batch() in order to take action once all widgets are rendered.",
+            "author"     : [ "itsasbreuk" ],
+            "modules"    : ["gallery-itsawidgetrenderpromise", "node", "gallery-itsadialog"],
+            "tags"    : ["gallery-itsawidgetrenderpromise", "renderpromise"],
+            "hideTableOfContents": true
+        },
+        {
+            "name"       : "using-readypromise",
+            "displayName": "Create widget-extention and make use of readyPromise()",
+            "description": "This example shows how to use readyPromise() to take action once a widget is complete ready.",
+            "author"     : [ "itsasbreuk" ],
+            "modules"    : ["gallery-itsawidgetrenderpromise", "node", "gallery-itsadialog", "panel", "promise", "base-build"],
+            "tags"    : ["gallery-itsawidgetrenderpromise", "readypromise"],
+            "hideTableOfContents": true
+        },
+        {
+            "name"       : "using-renderonavailablepromise",
+            "displayName": "Render a widget before scrNode is in the DOM",
+            "description": "This example shows how to use renderOnAvailable() to render an Y.Calendar-instance before the scrNode is in the DOM.",
+            "author"     : [ "itsasbreuk" ],
+            "modules"    : ["gallery-itsawidgetrenderpromise", "node", "calendar"],
+            "tags"    : ["gallery-itsawidgetrenderpromise", "renderonavailable", "renderonavailablepromise"],
+            "hideTableOfContents": true
+        },
+        {
+            "name"       : "using-renderwhenavailable",
+            "displayName": "Making a widget re-render multiple times",
+            "description": "This example shows how to re-render a widget by the appearance and removal of the containerNode.",
+            "author"     : [ "itsasbreuk" ],
+            "modules"    : ["gallery-itsawidgetrenderpromise", "node", "calendar", "re-render"],
+            "tags"    : ["gallery-itsawidgetrenderpromise", "renderwhenavailable", "renderwhenavailablepromise"],
+            "hideTableOfContents": true
+        }
+    ]
+}

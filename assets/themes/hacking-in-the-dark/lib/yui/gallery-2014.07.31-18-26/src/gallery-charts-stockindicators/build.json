@@ -1,0 +1,14 @@
+{
+    "name": "gallery-charts-stockindicators",
+    "builds": {
+        "gallery-charts-stockindicators": {
+            "jsfiles": [
+                "Crosshair.js",
+                "Gridlines.js",
+                "StockIndicatorsLegend.js",
+                "StockIndicatorsChart.js",
+                "StockIndicatorsSpark.js"
+            ]
+        }
+    }
+}

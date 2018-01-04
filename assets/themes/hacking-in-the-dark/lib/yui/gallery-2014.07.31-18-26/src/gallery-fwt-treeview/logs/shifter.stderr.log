@@ -1,0 +1,15 @@
+shifter [err] /assets/skins/sam/gallery-fwt-treeview-skin.css contains 7 lint errors
+   #1: [warning] Background image 'treeview-sprite.png' was used multiple times, first declared at line 29, col 5.
+       background: url(treeview-sprite.png) 0 0 repeat-y; // line 39, pos 5
+   #2: [warning] Don't use adjoining classes.
+       .yui3-skin-sam  .yui3-gallery-fwt-treeview .yui3-flyweight-tree-node-no-children.yui3-flyweight-tree-node-last-child  > div > .yui3-fw-treeview-toggle { // line 53, pos 44
+   #3: [warning] Don't use adjoining classes.
+       .yui3-skin-sam  .yui3-gallery-fwt-treeview .yui3-flyweight-tree-node-expanded.yui3-flyweight-tree-node-last-child  > div > .yui3-fw-treeview-toggle { // line 62, pos 44
+   #4: [warning] Don't use adjoining classes.
+       .yui3-skin-sam  .yui3-gallery-fwt-treeview .yui3-flyweight-tree-node-expanded.yui3-flyweight-tree-node-last-child  > div > .yui3-fw-treeview-toggle:hover { // line 66, pos 44
+   #5: [warning] Don't use adjoining classes.
+       .yui3-skin-sam  .yui3-gallery-fwt-treeview .yui3-flyweight-tree-node-collapsed.yui3-flyweight-tree-node-last-child  > div > .yui3-fw-treeview-toggle { // line 76, pos 44
+   #6: [warning] Don't use adjoining classes.
+       .yui3-skin-sam  .yui3-gallery-fwt-treeview .yui3-flyweight-tree-node-collapsed.yui3-flyweight-tree-node-last-child  > div > .yui3-fw-treeview-toggle:hover { // line 79, pos 44
+   #7: [warning] Background image 'treeview-sprite.png' was used multiple times, first declared at line 29, col 5.
+       background: url(treeview-sprite.png) 0 0 no-repeat; // line 91, pos 2

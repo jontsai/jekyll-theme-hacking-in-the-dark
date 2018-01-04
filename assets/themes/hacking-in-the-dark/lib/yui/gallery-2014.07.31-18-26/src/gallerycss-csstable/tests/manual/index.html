@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+  <link rel="stylesheet" type="text/css" href="../../../../build/gallerycss-csstable/gallerycss-csstable.css">
+  <!-- <link rel="stylesheet" type="text/css" href="../../../../build/gallerycss-csstable/gallerycss-csstable.css"> -->
+
+  <style>
+    body {
+      padding:30px;
+      font-size:14px;
+      width:600px;
+/*      background: #111;
+      color: #eee;*/
+    }
+    .gist {
+      margin:30px 0;
+      width:480px;
+    }
+
+    code {
+      padding: 2px 4px;
+      border-radius:3px;
+      margin: 3px;
+      background: #FEFFD4;
+      color:#464729;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="intro">
+    <h1>CSS Tables</h1>
+    <h2>
+      Simple CSS for HTML Tables
+    </h2>
+  </div>
+
+  <h2>Default Table</h2>
+
+  <p>Add the <code>yui3-table</code> classname to a table to style an HTML table similar to how a YUI3 Datatable would be styled. This class adds appropriate padding and borders to table elements, and increases the emphasis on the header.</p>
+  <table class="yui3-table">
+      <thead>
+          <tr>
+            <th>#</th>
+            <th>Make</th>
+            <th>Model</th>
+            <th>Year</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+            <td>1</td>
+            <td>Honda</td>
+            <td>Accord</td>
+            <td>2009</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Toyota</td>
+            <td>Camry</td>
+            <td>2012</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Hyundai</td>
+            <td>Elantra</td>
+            <td>2010</td>
+          </tr>
+      </tbody>
+  </table>
+
+  <h2>Table with Horizontal Borders</h2>
+  <p>If you prefer to just have horizontal lines, add the <code>yui3-table-horizontal</code> classname to the <code>table</code> element.</p>
+  <table class="yui3-table yui3-table-horizontal">
+    <thead>
+        <tr>
+          <th>#</th>
+          <th>Make</th>
+          <th>Model</th>
+          <th>Year</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>1</td>
+          <td>Honda</td>
+          <td>Accord</td>
+          <td>2009</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Toyota</td>
+          <td>Camry</td>
+          <td>2012</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Hyundai</td>
+          <td>Elantra</td>
+          <td>2010</td>
+        </tr>
+    </tbody>
+  </table>
+
+  <h2>Bordered Table</h2>
+  <table class="yui3-table yui3-table-bordered">
+      <thead>
+          <tr>
+              <th>#</th>
+              <th>Make</th>
+              <th>Model</th>
+              <th>Year</th>
+          </tr>
+      </thead>
+
+      <tbody>
+          <tr>
+              <td>1</td>
+              <td>Honda</td>
+              <td>Accord</td>
+              <td>2009</td>
+          </tr>
+
+          <tr>
+              <td>2</td>
+              <td>Toyota</td>
+              <td>Camry</td>
+              <td>2012</td>
+          </tr>
+
+          <tr>
+              <td>3</td>
+              <td>Hyundai</td>
+              <td>Elantra</td>
+              <td>2010</td>
+          </tr>
+      </tbody>
+  </table>
+  <h2>Striped Table</h2>
+  <p>Large tables are easier to parse visually if rows are easily distinguishable. Adding the <code>yui3-table-odd</code> class name to every other <code>tr</code> element changes the background of the row and creates a zebra-styled effect.</p>
+  <table class="yui3-table yui3-table-horizontal">
+    <thead>
+        <tr>
+          <th>#</th>
+          <th>Make</th>
+          <th>Model</th>
+          <th>Year</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class='yui3-table-odd'>
+          <td>1</td>
+          <td>Honda</td>
+          <td>Accord</td>
+          <td>2009</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Toyota</td>
+          <td>Camry</td>
+          <td>2012</td>
+        </tr>
+        <tr class='yui3-table-odd'>
+          <td>3</td>
+          <td>Hyundai</td>
+          <td>Elantra</td>
+          <td>2010</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Ford</td>
+          <td>Focus</td>
+          <td>2008</td>
+        </tr>
+        <tr class='yui3-table-odd'>
+          <td>5</td>
+          <td>Nissan</td>
+          <td>Sentra</td>
+          <td>2011</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>BMW</td>
+          <td>M3</td>
+          <td>2009</td>
+        </tr>
+        <tr class='yui3-table-odd'>
+          <td>7</td>
+          <td>Honda</td>
+          <td>Civic</td>
+          <td>2010</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Kia</td>
+          <td>Soul</td>
+          <td>2010</td>
+        </tr>
+    </tbody>
+  </table>
+
+  <h2>Using with Datatable</h2>
+
+  <div id="example" class="yui3-table"></div>
+  <script src="../../../../../yui3/build/yui/yui-min.js"></script>
+  <script>
+  YUI().use('datatable', function (Y) {
+    var data = [
+        { id: "ga-3475", name: "gadget",   price: "$6.99", cost: "$5.99" },
+        { id: "sp-9980", name: "sprocket", price: "$3.75", cost: "$3.25" },
+        { id: "wi-0650", name: "widget",   price: "$4.25", cost: "$3.75" }
+    ];
+
+    var table = new Y.DataTable({
+        columns: ["id", "name", "price"],
+        data: data,
+
+        // Optionally configure your table with a caption
+        caption: "My first DataTable!",
+
+        // and/or a summary (table attribute)
+        summary: "Example DataTable showing basic instantiation configuration"
+    });
+
+    table.render("#example");
+  });
+  </script>
+</body>
+</html>

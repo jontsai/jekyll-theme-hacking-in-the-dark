@@ -1,0 +1,11 @@
+{
+  "name"       : "gallery-rocket",
+  "displayName": "Gallery: gallery-rocket",
+  "description": "A JavaScript MVC framework for scalable One-Page-Application using YUI",
+  "author"     : [ "camsong" ],
+  "use"        : [ "gallery-rocket" ],
+
+  "tags": [ "gallery", "app framework" ],
+
+  "examples": []
+}

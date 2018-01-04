@@ -1,0 +1,10 @@
+{
+    "builds": {
+        "gallery-alea": {
+            "jsfiles": [
+                "alea.js"
+            ]
+        }
+    },
+    "name": "gallery-alea"
+}

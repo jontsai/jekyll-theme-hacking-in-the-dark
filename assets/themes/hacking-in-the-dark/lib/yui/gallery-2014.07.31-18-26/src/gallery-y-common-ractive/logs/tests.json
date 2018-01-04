@@ -1,0 +1,36 @@
+{
+    "name": "gallery-y-common-ractive",
+    "passed": 4,
+    "failed": 0,
+    "errors": 0,
+    "ignored": 0,
+    "total": 4,
+    "duration": 4068,
+    "type": "report",
+    "Automated Tests": {
+        "name": "Automated Tests",
+        "passed": 2,
+        "failed": 0,
+        "errors": 0,
+        "ignored": 0,
+        "total": 2,
+        "duration": 2030,
+        "type": "testcase",
+        "application initialized": {
+            "result": "pass",
+            "message": "Test passed",
+            "type": "test",
+            "name": "application initialized",
+            "duration": 1007
+        },
+        "style decorator test": {
+            "result": "pass",
+            "message": "Test passed",
+            "type": "test",
+            "name": "style decorator test",
+            "duration": 1001
+        }
+    },
+    "timestamp": "Thu 12 Jun 2014 02:48:08 PM PDT",
+    "consoleInfo": []
+}

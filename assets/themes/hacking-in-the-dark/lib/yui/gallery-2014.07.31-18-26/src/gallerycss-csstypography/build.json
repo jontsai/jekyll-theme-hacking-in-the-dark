@@ -1,0 +1,10 @@
+{
+    "name": "gallerycss-csstypography",
+    "builds": {
+        "gallerycss-csstypography": {
+            "cssfiles": [
+                "css/pure-typography.css"
+            ]
+        }
+    }
+}

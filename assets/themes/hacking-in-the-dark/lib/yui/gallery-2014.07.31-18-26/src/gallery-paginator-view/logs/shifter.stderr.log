@@ -1,0 +1,14 @@
+shifter [err] /src/gallery-paginator-view/js/paginator-view.js contains 1 lint errors
+   #1: Expected '===' and instead saw '=='.
+       if ( opt.get('value') == model.get('itemsPerPage') // line 1130, pos 39
+shifter [err] /assets/skins/sam/gallery-paginator-view-skin.css contains 5 lint errors
+   #1: [warning] Using height with border can sometimes make elements larger than you expect.
+       border: 1px solid #324759; // line 8, pos 5
+   #2: [warning] Using width with border can sometimes make elements larger than you expect.
+       border: 1px solid #324759; // line 8, pos 5
+   #3: [warning] Using height with padding can sometimes make elements larger than you expect.
+       padding: 5px; // line 12, pos 5
+   #4: [warning] Using width with padding can sometimes make elements larger than you expect.
+       padding: 5px; // line 12, pos 5
+   #5: [warning] Missing vendor-prefixed CSS gradients for Old Webkit (Safari 4+, Chrome).
+       .yui3-pagview-bar { // line 17, pos 1

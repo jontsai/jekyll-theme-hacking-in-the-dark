@@ -1,0 +1,32 @@
+[35myogi[0m [37m[[0m[37minfo[0m[37m][0m  using yogi@0.0.55 on node@0.8.15
+[35myogi[0m [37m[[0m[37minfo[0m[37m][0m  using module: gallery-datatable-selection
+[35myogi[0m [37m[[0m[37minfo[0m[37m][0m  prepping grover tests
+[35myogi[0m [37m[[0m[37minfo[0m[37m][0m  adding tests route
+[35myogi[0m [37m[[0m[37minfo[0m[37m][0m  listening on: http://127.0.0.1:5001
+[35myogi[0m [37m[[0m[37minfo[0m[37m][0m  turning on coverage support in grover
+Starting Grover on 1 files with PhantomJS@1.7.0
+  Running 15 concurrent tests at a time.
+  Using a 120 second timeout per test.
+✔ [gallery-datatable-selection]: Passed: 15 Failed: 0 Total: 15 (ignored 0) (0.428 seconds) 90%
+Writing files in JSON format to: /src/gallery-datatable-selection/logs/tests.json
+
+----------------+-----------+-----------+-----------+-----------+
+File            |   % Stmts |% Branches |   % Funcs |   % Lines |
+----------------+-----------+-----------+-----------+-----------+
+   build/       |     90.53 |     67.52 |     93.02 |     90.53 |
+      All files |     90.53 |     67.52 |     93.02 |     90.53 |
+----------------+-----------+-----------+-----------+-----------+
+All files       |     90.53 |     67.52 |     93.02 |     90.53 |
+----------------+-----------+-----------+-----------+-----------+
+
+
+=============================== Coverage summary ===============================
+Statements   : 90.53% ( 239/264 )
+Branches     : 67.52% ( 158/234 )
+Functions    : 93.02% ( 40/43 )
+Lines        : 90.53% ( 239/264 )
+================================================================================
+----------------------------------------------------------------
+✔ [Total]: Passed: 15 Failed: 0 Total: 15 (ignored 0) (0.428 seconds)
+  [Grover Execution Timer] 1.243 seconds
+[35myogi[0m [37m[[0m[37minfo[0m[37m][0m  [32mgrover tests complete[0m

@@ -1,0 +1,29 @@
+{
+    "gallery-itsapanel": {
+        "requires": [
+            "yui-base",
+            "node-pluginhost",
+            "gallery-itsapluginpromise",
+            "dd-ddm",
+            "node-event-delegate",
+            "node-style",
+            "base-base",
+            "base-build",
+            "widget-modality",
+            "widget-position",
+            "widget-position-align",
+            "widget-position-constrain",
+            "widget-stack",
+            "view",
+            "promise",
+            "oop",
+            "widget",
+            "timers",
+            "event-custom-base",
+            "yui-later",
+            "gallery-itsawidgetrenderpromise",
+            "gallery-itsanodepromise"
+        ],
+        "skinnable": true
+    }
+}

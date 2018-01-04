@@ -3,7 +3,33 @@
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
-<script src="//yui.yahooapis.com/3.17.2/build/yui/yui-min.js"></script>
+<script type="text/javascript" src="{{ ASSET_PATH }}/lib/yui/3.18.1/build/yui/yui-min.js"></script>
+
+<script>
+YUI_config = {
+    lang  : [ /* ... */ ], // Required only if testing Lang bundle support.
+    groups: {
+        gallery: {
+            base  : '{{ ASSET_PATH }}/lib/yui/gallery-2014.07.31-18-26/build/', // Adjust as necessary.
+            patterns: {
+                'gallery-'   : {},
+                'gallerycss-': { type: 'css' }
+            },
+            modules: {
+                // Adding the full module configuration is a bit overkill, since
+                // you should have built your module correctly. However, Loader
+                // currently has issues with implicitly loading Lang bundles for
+                // Gallery modules when run locally like this. So I've included
+                // the full module configuration here for completeness.
+                    //
+                // You can probably safely drop the whole module config
+                // altogether if you don't need to test Lang bundle support.
+            }
+        }
+    }
+};
+</script>
+
 {% if site.author.stripe %}
 <script src="//checkout.stripe.com/checkout.js"></script>
 {% endif %}

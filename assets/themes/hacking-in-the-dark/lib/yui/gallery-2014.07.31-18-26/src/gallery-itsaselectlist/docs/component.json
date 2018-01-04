@@ -1,0 +1,21 @@
+{
+    "name"       : "gallery-itsaselectlist",
+    "displayName": "Gallery: gallery-itsaselectlist",
+    "description": "*Summary Goes Here*",
+    "author"     : [ "itsasbreuk" ],
+    "use"        : [ "gallery-itsaselectlist" ],
+
+    "tags": [ "gallery" ],
+
+    "examples": [
+        {
+            "name"       : "selectlist",
+            "displayName": "Creating a selectlist",
+            "description": "This example shows how use ITSAPanel to render a panel.",
+            "author"     : [ "itsasbreuk" ],
+            "modules"    : [ "gallery-itsapanel"],
+            "tags"    : ["gallery-itsapanel", "panel", "itsapanel"],
+            "hideTableOfContents": true
+        }
+    ]
+}
